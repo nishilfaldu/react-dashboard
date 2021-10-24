@@ -1,47 +1,28 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-// const primary = css`
-//     background: ${(p) => p.theme.colorPrimary};
-//     color: ${(p) => p.theme.colorPrimaryTextColor};
-// `;
-const primary = css`
-    background: "#8739F9";
-    color: ${(p) => p.theme.colorPrimaryTextColor};
-`;
-
-const accent = css`
-    background: ${(p) => p.theme.colorAccent};
-    color: ${(p) => p.theme.colorAccentTextColor};
-`;
-
 const Card = styled.div`
-    padding-bottom: ${(p) => (p.theme.paddingBottomCard)};
-    padding-top: ${(p) => (p.theme.paddingBottomCard)};
-    padding-right: ${(p) => (p.theme.paddingBottomCard)};
-    padding-left: ${(p) => (p.theme.paddingBottomCard)};
-    margin-top: ${(p) => p.theme.marginTop};
-    margin-left: ${(p) => p.theme.marginLeft};
-    margin-right: ${(p) => p.theme.marginRight};
-    margin-bottom: ${(p) => p.theme.marginBottom};
+    height: ${(p) => p.theme.cardHeight};
+    padding: ${(p) => (p.theme.paddingCard)};
+    margin-top: ${(p) => p.theme.marginTopCard};
+    margin-left: ${(p) => p.theme.marginLeftCard};
+    margin-right: ${(p) => p.theme.marginRightCard};
+    margin-bottom: ${(p) => p.theme.marginBottomCard};
     border-radius: ${(p) => p.theme.borderRadius};
     background: ${(p) => p.theme.colorCardBackground};
     color: ${(p) => p.theme.colorText};
-
-    ${(p) => p.isPrimary && primary};
-    ${(p) => p.isAccent && accent};
 `;
 
 const CardContent = styled.div`
     padding: 0rem 0rem 5rem 0rem;
+    font-size: ${(p) => p.theme.cardContentFontSize};
 `;
 
 const CardTitle = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: ${(p) => p.theme.cardTitleHeight};
-    padding: 0 ${(p) => p.theme.lenMd1};
+    padding: 2rem ${(p) => p.theme.lenMd1};
     color: ${(p) => p.theme.colorLabel};
     font-size: ${(p) => p.theme.cardTitleFontSize};
 `;

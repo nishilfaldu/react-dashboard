@@ -8,7 +8,7 @@ const Example = function(){
     <div className="col-lg-8 offset-lg-2">
     <ThemeProvider theme={theme}>    
         <SimpleCard cardTitle="Registrants" noBottomMargin>
-            I'm a simple accent card 
+            Today
         </SimpleCard>
     </ThemeProvider>
     </div>
