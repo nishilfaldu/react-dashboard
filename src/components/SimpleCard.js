@@ -1,8 +1,11 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import Chart from 'react-apexcharts';
+import { useState } from 'react';
 
 const Card = styled.div`
     height: ${(p) => p.theme.cardHeight};
+    // width: 25rem;
     padding: ${(p) => (p.theme.paddingCard)};
     margin-top: ${(p) => p.theme.marginTopCard};
     margin-left: ${(p) => p.theme.marginLeftCard};
@@ -27,7 +30,14 @@ const CardTitle = styled.div`
     font-size: ${(p) => p.theme.cardTitleFontSize};
 `;
 
+const ChartDiv = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+
 const SimpleCard = function({
+    series,
     children,
     cardTitle,
     isPrimary,
@@ -35,18 +45,78 @@ const SimpleCard = function({
     noBottomMargin,
     ...rest
   }){
+
+    const [options, setOptions] = useState({
+        chart: {
+          parentHeightOffset: 0,
+          toolbar: {
+            show: false,
+          },
+          animations: {
+            enabled: false,
+          },
+          stacked: true,
+          zoom: { enabled: false },
+        },
+        grid: {
+          show: false,
+          padding: {
+            top: 0,
+            right: -4,
+            bottom: -6,
+            left: -10,
+          },
+        },
+        stroke: {
+          show: false,
+        },
+        plotOptions: {
+          bar: {
+            barHeight: "50%",
+          },
+        },
+        tooltip: { enabled: false },
+        legend: { show: false },
+        dataLabels: { enabled: false },
+        xaxis: {
+          floating: true,
+          labels: {
+            show: false,
+            offsetY: -10,
+          },
+          axisBorder: {
+            show: false,
+          },
+          axisTicks: {
+            show: false,
+          },
+          maxHeight: 0,
+        },
+        yaxis: {
+          floating: true,
+          offsetX: -20,
+          labels: {
+            show: false,
+          },
+          axisBorder: {
+            show: false,
+          },
+          axisTicks: {
+            show: false,
+          },
+        },
+      });
+
     return (
       <Card
-        // hasTitle={cardTitle}
-        isPrimary={isPrimary}
-        isAccent={isAccent}
-        noBottomMargin={noBottomMargin}
-        {...rest}
       >
         {cardTitle && (
           <>
             <CardTitle>{cardTitle}</CardTitle>
             <CardContent>{children}</CardContent>
+            <ChartDiv>
+                <Chart options={options} series={series} type="bar" height="auto" width="100%"/>
+            </ChartDiv>
           </>
         )}
         {!cardTitle && children}
