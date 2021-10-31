@@ -1,7 +1,5 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import Chart from 'react-apexcharts';
-import { useState } from 'react';
 
 const Card = styled.div`
     height: ${(p) => p.theme.cardHeight};
@@ -10,31 +8,23 @@ const Card = styled.div`
     background: ${(p) => p.theme.colorCardBackground};
 `;
 
-const CardContent = styled.div`
-    padding: 0rem 0rem 5rem 0rem;
-    font-size: ${(p) => p.theme.cardContentFontSize};
-    color: ${(p) => p.theme.colorText};
-`;
-
 const CardTitle = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    color: ${(p) => p.theme.colorLabel};
+    padding-top: ${(p) => p.theme.cardTitlePaddingTop};
+    padding-right: ${(p) => p.theme.cardTitlePaddingRight};
+    padding-bottom: ${(p) => p.theme.cardTitlePaddingBottom}; 
+    padding-left: ${(p) => p.theme.cardTitlePaddingLeft};
+    color: ${(p) => p.theme.colorTitle};
     font-size: ${(p) => p.theme.cardTitleFontSize};
 `;
 
-const ChartDiv = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-`
+const CardContent = styled.div`
+    font-size: ${(p) => p.theme.cardContentFontSize};
+    color: ${(p) => p.theme.colorContent};
+`;
 
 const SimpleCard = function(
     {cardTitle, children}
   ){
-
     return (
       <Card
       >
