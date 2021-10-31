@@ -1,5 +1,4 @@
 import { rgba } from "polished";
-import themeDefault from "./themeDefault";
 
 const colorLabel = rgba("white", 0.57);
 const colorText = rgba("white", 0.96);
@@ -7,25 +6,13 @@ const colorText = rgba("white", 0.96);
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   id: "dark",
-  ...themeDefault,
+  fontFamily: "Poppins",
   borderRadius: "1rem",
-  colorBackground: "#242424",
-//   colorNavbar: "#100f10",
-//   colorNavbarLabel: colorLabel,
-//   colorNavbarLink: colorText,
+  cardTitleFontSize: "2rem",
+  cardContentFontSize: "2em",
+  cardHeight: "30rem",
+  cardWidth: "25rem",
   colorText: colorText,
   colorLabel: colorLabel,
-  colorBorder: "#393939",
-  colorPrimary: "#8739F9",
-  colorPrimaryText: colorText,
-  colorAccent: "#00AAF2",
-  colorAccentText: colorText,
   colorCardBackground: "#1B1B1B",
-  colorDefaultBackground: "#2D2D2D",
-  colorDefaultText: colorText,
-//   colorDisabledBackground: "#3d3d3d",
-//   colorDisabledText: "#6b6666",
-//   colorCode: "#242424",
-  colorChartShading: "white",
-  boxShadowLogo: "none",
 };

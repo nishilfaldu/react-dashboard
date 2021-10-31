@@ -5,27 +5,22 @@ import { useState } from 'react';
 
 const Card = styled.div`
     height: ${(p) => p.theme.cardHeight};
-    // width: 25rem;
-    padding: ${(p) => (p.theme.paddingCard)};
-    margin-top: ${(p) => p.theme.marginTopCard};
-    margin-left: ${(p) => p.theme.marginLeftCard};
-    margin-right: ${(p) => p.theme.marginRightCard};
-    margin-bottom: ${(p) => p.theme.marginBottomCard};
+    width: ${(p) => p.theme.cardWidth};
     border-radius: ${(p) => p.theme.borderRadius};
     background: ${(p) => p.theme.colorCardBackground};
-    color: ${(p) => p.theme.colorText};
 `;
 
 const CardContent = styled.div`
     padding: 0rem 0rem 5rem 0rem;
     font-size: ${(p) => p.theme.cardContentFontSize};
+    color: ${(p) => p.theme.colorText};
 `;
 
 const CardTitle = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem ${(p) => p.theme.lenMd1};
+    padding: 2rem;
     color: ${(p) => p.theme.colorLabel};
     font-size: ${(p) => p.theme.cardTitleFontSize};
 `;
@@ -36,76 +31,9 @@ const ChartDiv = styled.div`
     justify-content: center;
 `
 
-const SimpleCard = function({
-    series,
-    children,
-    cardTitle,
-    isPrimary,
-    isAccent,
-    noBottomMargin,
-    ...rest
-  }){
-
-    const [options, setOptions] = useState({
-        chart: {
-          parentHeightOffset: 0,
-          toolbar: {
-            show: false,
-          },
-          animations: {
-            enabled: false,
-          },
-          stacked: true,
-          zoom: { enabled: false },
-        },
-        grid: {
-          show: false,
-          padding: {
-            top: 0,
-            right: -4,
-            bottom: -6,
-            left: -10,
-          },
-        },
-        stroke: {
-          show: false,
-        },
-        plotOptions: {
-          bar: {
-            barHeight: "50%",
-          },
-        },
-        tooltip: { enabled: false },
-        legend: { show: false },
-        dataLabels: { enabled: false },
-        xaxis: {
-          floating: true,
-          labels: {
-            show: false,
-            offsetY: -10,
-          },
-          axisBorder: {
-            show: false,
-          },
-          axisTicks: {
-            show: false,
-          },
-          maxHeight: 0,
-        },
-        yaxis: {
-          floating: true,
-          offsetX: -20,
-          labels: {
-            show: false,
-          },
-          axisBorder: {
-            show: false,
-          },
-          axisTicks: {
-            show: false,
-          },
-        },
-      });
+const SimpleCard = function(
+    {cardTitle, children}
+  ){
 
     return (
       <Card
@@ -114,9 +42,6 @@ const SimpleCard = function({
           <>
             <CardTitle>{cardTitle}</CardTitle>
             <CardContent>{children}</CardContent>
-            <ChartDiv>
-                <Chart options={options} series={series} type="bar" height="auto" width="100%"/>
-            </ChartDiv>
           </>
         )}
         {!cardTitle && children}
