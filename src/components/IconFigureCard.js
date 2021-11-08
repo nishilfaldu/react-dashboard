@@ -9,17 +9,17 @@ const Card = styled.div`
     align-items: center;
     justify-content: space-between;
     border-radius: ${(p) => p.theme.cardBorderRadius};
-    background: ${(p) => p.theme.cardColorBackground};
+    background: ${(p) => p.theme.colorCardBackground};
 `
 
 const Label = styled.div`
-    color: ${(p) => p.theme.labelColor};
-    font-size: ${(p) => p.theme.labelFontSize};
+    color: ${(p) => p.theme.cardLabelColor};
+    font-size: ${(p) => p.theme.cardLabelFontSize};
 `
 
 const Value = styled.div`
-    color: ${(p) => p.theme.valueColor};
-    font-size: ${(p) => p.theme.valueFontSize};
+    color: ${(p) => p.theme.cardValueColor};
+    font-size: ${(p) => p.theme.cardValueFontSize};
 `
 
 const Icon = styled.span`
@@ -31,11 +31,15 @@ const Icon = styled.span`
 
 const IconFigureCard = function(){
     return(
-        <Card>
-            <Label></Label>
-            <Label></Label>
-            <Icon></Icon>
-        </Card>
+        <div>
+            <ThemeProvider theme={theme}>
+                <Card>
+                    <Label>Hello World</Label>
+                    <Value>20</Value>
+                    <Icon></Icon>
+                </Card>
+            </ThemeProvider>
+        </div>
     );
 }
 

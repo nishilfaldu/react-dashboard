@@ -12,26 +12,23 @@ export default {
     fontFamily: "Poppins",
 
     // Properties of a Card
-    cardHeight: "35rem",
-    cardWidth: "35rem",
-    borderRadius: "1rem",
+    cardHeight: "10rem",
+    cardWidth: "10rem",
+    cardBorderRadius: "1rem",
     colorCardBackground: "#1B1B1B",
 
-    // Properties of Card Title
-    cardTitleFontSize: "2rem",
-    cardTitlePaddingTop: "2rem",
-    cardTitlePaddingRight: "2rem",
-    cardTitlePaddingBottom: "2rem",
-    cardTitlePaddingLeft: "2rem",
-    colorTitle: colorTitle,
+    // Properties of Card Label
+    cardLabelFontSize: "2rem",
+    cardLabelColor: colorTitle,
+    // cardTitlePaddingTop: "2rem",
+    // cardTitlePaddingRight: "2rem",
+    // cardTitlePaddingBottom: "2rem",
+    // cardTitlePaddingLeft: "2rem",
 
-    // Properties of Card Content
-    cardContentPaddingTop: "None",
-    cardContentPaddingRight: "None",
-    cardContentPaddingBottom: "None",
-    cardContentPaddingLeft: "None",
+    // Properties of Card Value 
+    cardValueColor: colorContent,
+    cardValueFontSize: "2rem",
 
-    // Properties of Card Content (Text other than title)
-    cardContentFontSize: "2em",
-    colorContent: colorContent,
+    // Properties of Card Icon
+    borderRadiusIcon: "50%",
 };
