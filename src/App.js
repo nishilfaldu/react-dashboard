@@ -1,10 +1,12 @@
 import './App.css';
-import Example from './components/Example.js';
+import BarChartCard from './components/BarChartCard';
+import PieChartCard from './components/PieChartCard';
 
 function App() {
   return (
     <div className="App">
-      <Example></Example>
+      <BarChartCard></BarChartCard>
+      <PieChartCard></PieChartCard>
     </div>
   );
 }

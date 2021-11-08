@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { ThemeProvider, css } from "styled-components";
 import SimpleCard from "./SimpleCard.js";
-import theme from "./themeDark"
+import theme from "../styling-properties/propBarChart"
 import Chart from 'react-apexcharts';
 import { useState } from "react";
 
@@ -10,7 +10,7 @@ const ChartDiv = styled.div`
     align-items: center;
     justify-content: center;
 `
-const Example = function(){
+const BarChartCard = function(){
 
   const [options, setOptions] = useState({
     chart: {
@@ -85,7 +85,7 @@ const Example = function(){
     ];
 
     return (
-        <div className="col-lg-8 offset-lg-2">
+      <div>
         <ThemeProvider theme={theme}>    
             <SimpleCard cardTitle="Registrants">
                 Today
@@ -96,8 +96,8 @@ const Example = function(){
                 </ChartDiv>
             </SimpleCard>
         </ThemeProvider>
-        </div>
+      </div>
     );
 };
 
-export default Example;
+export default BarChartCard;

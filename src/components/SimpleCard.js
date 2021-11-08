@@ -9,6 +9,8 @@ const Card = styled.div`
 `;
 
 const CardTitle = styled.div`
+    justify-content: center;
+    align-items: center;
     padding-top: ${(p) => p.theme.cardTitlePaddingTop};
     padding-right: ${(p) => p.theme.cardTitlePaddingRight};
     padding-bottom: ${(p) => p.theme.cardTitlePaddingBottom}; 
@@ -20,6 +22,10 @@ const CardTitle = styled.div`
 const CardContent = styled.div`
     font-size: ${(p) => p.theme.cardContentFontSize};
     color: ${(p) => p.theme.colorContent};
+    padding-top: ${(p) => p.theme.cardContentPaddingTop};
+    padding-right: ${(p) => p.theme.cardContentPaddingTop};
+    padding-bottom: ${(p) => p.theme.cardContentPaddingTop};
+    padding-left: ${(p) => p.theme.cardContentPaddingTop};
 `;
 
 const SimpleCard = function(
