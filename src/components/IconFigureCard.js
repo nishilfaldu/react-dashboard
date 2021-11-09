@@ -39,17 +39,17 @@ const Div = styled.div`
     padding-top: 1rem;
 `
 
-const IconFigureCard = function(){
+const IconFigureCard = function(props){
     return(
         <div>
             <ThemeProvider theme={theme}>
                 <IconCard>
                 <Div>
                     <div style={{paddingRight: '5rem'}}>    
-                        <Label>Schools</Label>
-                        <Value>200</Value>
+                        <Label>{props.cardTitle}</Label>
+                        <Value>{props.cardValue}</Value>
                     </div>
-                        <Icon><SchoolIcon sx={{ fontSize: 60, color: 'white' }}></SchoolIcon></Icon>
+                        <Icon>{props.schoolIcon}</Icon>
                 </Div>
                 </IconCard>
             </ThemeProvider>
