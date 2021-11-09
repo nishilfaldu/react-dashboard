@@ -20,16 +20,10 @@ export default {
   // Properties of Card Title
   cardTitleFontSize: "2rem",
   cardTitlePaddingTop: "2rem",
-  cardTitlePaddingRight: "None",
+  cardTitlePaddingRight: "2rem",
   cardTitlePaddingBottom: "2rem",
   cardTitlePaddingLeft: "2rem",
   colorTitle: colorTitle,
-
-  // Properties of Card Content
-  cardContentPaddingTop: "None",
-  cardContentPaddingRight: "None",
-  cardContentPaddingBottom: "None",
-  cardContentPaddingLeft: "None",
 
   // Properties of Card Content (Text other than title)
   cardContentFontSize: "2em",
