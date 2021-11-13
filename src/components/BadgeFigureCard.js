@@ -23,13 +23,12 @@ const Column = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    // padding-right: 3rem;
 `
 
 const Label = styled.div`
     color: ${(p) => p.theme.cardLabelColor};
     font-size: ${(p) => p.theme.cardLabelFontSize};
-    padding-left: 2rem;
+    padding-left: ${(p) => p.theme.cardLabelPaddingLeft};
 `
 const Value = styled.div`
     color: ${(p) => p.theme.cardValueColor};
@@ -38,9 +37,9 @@ const Value = styled.div`
 
 const ColoredSpan = styled.span`
     background-color: pink;
-    height: 1rem;
-    width: 1rem;
-    border-radius: 50%;
+    height: ${(p) => p.theme.coloredSpanHeight};
+    width: ${(p) => p.theme.coloredSpanWidth};
+    border-radius: ${(p) => p.theme.coloredSpanBorderRadius};
 `
 
 const BadgeFigureCard = function(props){

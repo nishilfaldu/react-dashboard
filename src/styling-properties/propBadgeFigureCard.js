@@ -20,6 +20,7 @@ export default {
     // Properties of Card Label
     cardLabelFontSize: "1.2rem",
     cardLabelColor: colorTitle,
+    cardLabelPaddingLeft: "2rem",
     // cardTitlePaddingTop: "2rem",
     // cardTitlePaddingRight: "2rem",
     // cardTitlePaddingBottom: "2rem",
@@ -31,4 +32,9 @@ export default {
 
     // Properties of Card Icon
     borderRadiusIcon: "50%",
+
+    // Span of colored circle
+    coloredSpanWidth: "1rem",
+    coloredSpanHeight: "1rem",
+    coloredSpanBorderRadius: "50%",
 };
