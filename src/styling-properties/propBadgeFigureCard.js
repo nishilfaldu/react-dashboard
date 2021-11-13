@@ -30,9 +30,6 @@ export default {
     cardValueColor: colorContent,
     cardValueFontSize: "2rem",
 
-    // Properties of Card Icon
-    borderRadiusIcon: "50%",
-
     // Span of colored circle
     coloredSpanWidth: "1rem",
     coloredSpanHeight: "1rem",
