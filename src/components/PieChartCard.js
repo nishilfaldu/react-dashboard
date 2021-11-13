@@ -12,7 +12,7 @@ const ChartDiv = styled.div`
     padding-top: 2rem;
 `
 
-const PieChartCard = function(){
+const PieChartCard = function(props){
 
     const [options, setOptions] = useState({
         series: [20, 20, 20, 20, 20],
@@ -48,14 +48,14 @@ const PieChartCard = function(){
             }
         },
         chart: {
-            toolbar: {
-                show:true,
-                offsetX: 50,
-                offsetY: -170,
-                tools: {
-                    download: true,
-                },
-            },
+            // toolbar: {
+            //     show:true,
+            //     offsetX: 50,
+            //     offsetY: -170,
+            //     tools: {
+            //         download: true,
+            //     },
+            // },
             // textcolor (Not of chart elements)
             foreColor: '#ffffff',
             fontFamily: 'Helvetica, Arial, sans-serif',
@@ -79,11 +79,11 @@ const PieChartCard = function(){
 
     return(
         <div>
-            <ThemeProvider theme={theme}>    
-            <SimpleCard cardTitle="Ethnicities ">
-                RevolutionUC 2019
+        <ThemeProvider theme={theme}>    
+            <SimpleCard cardTitle={props.cardTitle}>
+                {props.cardLabel}
                 <br></br>
-                250
+                {props.cardValue}
                 <ChartDiv>
                   <Chart options={options} series={options.series} type="pie" height="auto" width="150%"/>
                 </ChartDiv>

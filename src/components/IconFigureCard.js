@@ -1,7 +1,6 @@
 import React from 'react';
 import styled, { ThemeProvider } from "styled-components";
-import theme from "../styling-properties/propSchoolsCard";
-import SchoolIcon from '@mui/icons-material/School';
+import theme from "../styling-properties/propIconCard";
 
 const IconCard = styled.div`
     height: ${(p) => p.theme.cardHeight};
@@ -13,14 +12,11 @@ const IconCard = styled.div`
 const Label = styled.div`
     color: ${(p) => p.theme.cardLabelColor};
     font-size: ${(p) => p.theme.cardLabelFontSize};
-    // padding-right: 1rem;
-    // padding-top: 1rem;
 `
 
 const Value = styled.div`
     color: ${(p) => p.theme.cardValueColor};
     font-size: ${(p) => p.theme.cardValueFontSize};
-    // padding-right: 8rem;
 `
 
 const Icon = styled.span`
@@ -35,7 +31,6 @@ const Div = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: auto;
     padding-top: 1rem;
 `
 
@@ -49,7 +44,7 @@ const IconFigureCard = function(props){
                         <Label>{props.cardTitle}</Label>
                         <Value>{props.cardValue}</Value>
                     </div>
-                        <Icon>{props.schoolIcon}</Icon>
+                        <Icon>{props.Icon}</Icon>
                 </Div>
                 </IconCard>
             </ThemeProvider>
