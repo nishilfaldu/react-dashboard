@@ -26,11 +26,6 @@ const Column = styled.div`
     // padding-right: 3rem;
 `
 
-// const Row = styled.div`
-//     display: flex;
-//     align-items: center;
-// `
-
 const Label = styled.div`
     color: ${(p) => p.theme.cardLabelColor};
     font-size: ${(p) => p.theme.cardLabelFontSize};
@@ -48,7 +43,7 @@ const ColoredSpan = styled.span`
     border-radius: 50%;
 `
 
-const BadgeFigureCard = function(){
+const BadgeFigureCard = function(props){
     return(
         <div>
             <ThemeProvider theme={theme}>
@@ -56,15 +51,15 @@ const BadgeFigureCard = function(){
                     <Row>
                         <ColoredSpan/>
                         <Column>
-                            <Label>Registrants</Label>
-                            <Value>500</Value>
+                            <Label>{props.LabelOne}</Label>
+                            <Value>{props.ValueOne}</Value>
                         </Column>
                     </Row>
                     <Row>
                         <ColoredSpan/>
                         <Column>
-                            <Label>Participants</Label>
-                            <Value>500</Value>
+                            <Label>{props.LabelTwo}</Label>
+                            <Value>{props.ValueTwo}</Value>
                         </Column>
                     </Row>
                 </BadgeCard>

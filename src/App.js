@@ -34,7 +34,10 @@ function App() {
                                   <PeopleAltIcon sx={{ fontSize: 60, color: 'white' }}/>
                                   }> 
       </IconFigureCard>
-      <BadgeFigureCard></BadgeFigureCard>
+      <BadgeFigureCard LabelOne="Registrants"
+                        ValueOne="500"
+                        LabelTwo="Participants"
+                        ValueTwo="500"></BadgeFigureCard>
       <PieChartCard cardTitle="Education" cardLabel="Today" cardValue="250"></PieChartCard>
     </div>
   );
