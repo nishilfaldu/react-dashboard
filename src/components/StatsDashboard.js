@@ -11,22 +11,39 @@ import styled from 'styled-components';
 
 const SmallComponentsRow = styled.div`
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
 `
 
 const StatsDashboard = function(){
     return(
         <div>
-            <BarChartCard></BarChartCard>
-            <PieChartCard cardTitle="Ethnicities" cardLabel="Today" cardValue="250"></PieChartCard>
-            <IconFigureCard cardTitle="Schools" cardValue="200" Icon={
-                                        <SchoolIcon sx={{ fontSize: 60, color: 'white' }}/>
-                                        }> 
-            </IconFigureCard>
-            <IconFigureCard cardTitle="Females" cardValue="200" Icon={
+            <SmallComponentsRow>
+                <IconFigureCard cardTitle="Schools" cardValue="200" Icon={
+                                            <SchoolIcon sx={{ fontSize: 60, color: 'white' }}/>
+                                            }> 
+                </IconFigureCard>
+                <IconFigureCard cardTitle="Females" cardValue="200" Icon={
                                         <FemaleIcon sx={{ fontSize: 60, color: 'white' }}/>
                                         }> 
+                </IconFigureCard>
+                <IconFigureCard cardTitle="States" cardValue="50" Icon={
+                                        <LanguageIcon sx={{ fontSize: 60, color: 'white' }}/>
+                                        }> 
+                </IconFigureCard>
+                <IconFigureCard cardTitle="States" cardValue="50" Icon={
+                                        <LanguageIcon sx={{ fontSize: 60, color: 'white' }}/>
+                                        }> 
+                </IconFigureCard>
+            </SmallComponentsRow>
+            <IconFigureCard cardTitle="States" cardValue="50" Icon={
+                                        <LanguageIcon sx={{ fontSize: 60, color: 'white' }}/>
+                                        }> 
             </IconFigureCard>
+            <BarChartCard></BarChartCard>
+            <PieChartCard cardTitle="Ethnicities" cardLabel="Today" cardValue="250"></PieChartCard>
+            
+            
             <IconFigureCard cardTitle="States" cardValue="50" Icon={
                                         <LanguageIcon sx={{ fontSize: 60, color: 'white' }}/>
                                         }> 
