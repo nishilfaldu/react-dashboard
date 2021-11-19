@@ -9,7 +9,7 @@ import PublicIcon from '@mui/icons-material/Public';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import styled from 'styled-components';
 
-const SmallComponentsRow = styled.div`
+const StyledRow = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,7 @@ const SmallComponentsRow = styled.div`
 const StatsDashboard = function(){
     return(
         <div>
-            <SmallComponentsRow>
+            <StyledRow>
                 <IconFigureCard cardTitle="Schools" cardValue="200" Icon={
                                             <SchoolIcon sx={{ fontSize: 60, color: 'white' }}/>
                                             }> 
@@ -35,9 +35,9 @@ const StatsDashboard = function(){
                                         <LanguageIcon sx={{ fontSize: 60, color: 'white' }}/>
                                         }> 
                 </IconFigureCard>
-            </SmallComponentsRow>
+            </StyledRow>
 
-            <SmallComponentsRow>
+            <StyledRow>
                 <IconFigureCard cardTitle="Countries" cardValue="50" Icon={
                                             <PublicIcon sx={{ fontSize: 60, color: 'white' }}/>
                                             }> 
@@ -51,12 +51,18 @@ const StatsDashboard = function(){
                                 LabelTwo="Participants"
                                 ValueTwo="500">
                 </BadgeFigureCard>
-            </SmallComponentsRow>
+            </StyledRow>
+
+            <StyledRow>
+                <PieChartCard cardTitle="Ethnicities" cardLabel="Today" cardValue="250"></PieChartCard>
+                <BarChartCard></BarChartCard>
+                <PieChartCard cardTitle="Education" cardLabel="Today" cardValue="250"></PieChartCard>
+            </StyledRow>
             
-            <BarChartCard></BarChartCard>
-            <PieChartCard cardTitle="Ethnicities" cardLabel="Today" cardValue="250"></PieChartCard>
             
-            <PieChartCard cardTitle="Education" cardLabel="Today" cardValue="250"></PieChartCard>
+            
+            
+            
         </div>
     );
 }
