@@ -58,11 +58,6 @@ const StatsDashboard = function(){
                 <BarChartCard></BarChartCard>
                 <PieChartCard cardTitle="Education" cardLabel="Today" cardValue="250"></PieChartCard>
             </StyledRow>
-            
-            
-            
-            
-            
         </div>
     );
 }
