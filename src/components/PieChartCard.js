@@ -21,14 +21,14 @@ const PieChartCard = function(props){
             enabled: true,
             // style for text on graph
             style: {
-                fontSize: '20px',
+                fontSize: '15px',
                 fontFamily: 'Helvetica, Arial, sans-serif',
                 fontWeight: '0',
                 // colors: undefined
             },
         },
         legend: { 
-            show: true,
+            show: false,
             position: 'right',
             fontSize: '15px',
             fontWeight: '0',
@@ -71,7 +71,7 @@ const PieChartCard = function(props){
             width: 380,
             type: 'pie',
         },
-        labels: ['Group A', 'Group B', 'Group C', 'Group D', 'Group E'],
+        labels: ['EE', 'CS', 'CE', 'BME', 'ME'],
         responsive: [{
             breakpoint: 480,
         }]
@@ -85,7 +85,7 @@ const PieChartCard = function(props){
                 <br></br>
                 {props.cardValue}
                 <ChartDiv>
-                  <Chart options={options} series={options.series} type="pie" height="auto" width="150%"/>
+                  <Chart options={options} series={options.series} type="pie" height="auto" width="100%"/>
                 </ChartDiv>
             </SimpleCard>
         </ThemeProvider>

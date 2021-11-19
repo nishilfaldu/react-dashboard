@@ -88,7 +88,7 @@ const BarChartCard = function(){
       <div>
         <ThemeProvider theme={theme}>    
             <SimpleCard cardTitle="Registrants">
-                Today
+                Week
                 <br></br>
                 250
                 <ChartDiv>
