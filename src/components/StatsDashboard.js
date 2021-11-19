@@ -33,7 +33,7 @@ const StatsDashboard = function(){
                                         <LanguageIcon sx={{ fontSize: 60, color: 'white' }}/>
                                         }> 
                 </IconFigureCard>
-                <IconFigureCard cardTitle="States" cardValue="50" Icon={
+                <IconFigureCard cardTitle="Cities" cardValue="50" Icon={
                                         <LanguageIcon sx={{ fontSize: 60, color: 'white' }}/>
                                         }> 
                 </IconFigureCard>
