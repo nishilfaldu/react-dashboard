@@ -36,30 +36,26 @@ const StatsDashboard = function(){
                                         }> 
                 </IconFigureCard>
             </SmallComponentsRow>
-            <IconFigureCard cardTitle="States" cardValue="50" Icon={
-                                        <LanguageIcon sx={{ fontSize: 60, color: 'white' }}/>
+
+            <SmallComponentsRow>
+                <IconFigureCard cardTitle="Countries" cardValue="50" Icon={
+                                            <PublicIcon sx={{ fontSize: 60, color: 'white' }}/>
+                                            }> 
+                </IconFigureCard>
+                <IconFigureCard cardTitle="Lattice" cardValue="200" Icon={
+                                        <PeopleAltIcon sx={{ fontSize: 60, color: 'white' }}/>
                                         }> 
-            </IconFigureCard>
+                </IconFigureCard>
+                <BadgeFigureCard LabelOne="Registrants"
+                                ValueOne="500"
+                                LabelTwo="Participants"
+                                ValueTwo="500">
+                </BadgeFigureCard>
+            </SmallComponentsRow>
+            
             <BarChartCard></BarChartCard>
             <PieChartCard cardTitle="Ethnicities" cardLabel="Today" cardValue="250"></PieChartCard>
             
-            
-            <IconFigureCard cardTitle="States" cardValue="50" Icon={
-                                        <LanguageIcon sx={{ fontSize: 60, color: 'white' }}/>
-                                        }> 
-            </IconFigureCard>
-            <IconFigureCard cardTitle="Countries" cardValue="50" Icon={
-                                        <PublicIcon sx={{ fontSize: 60, color: 'white' }}/>
-                                        }> 
-            </IconFigureCard>
-            <IconFigureCard cardTitle="Lattice" cardValue="200" Icon={
-                                        <PeopleAltIcon sx={{ fontSize: 60, color: 'white' }}/>
-                                        }> 
-            </IconFigureCard>
-            <BadgeFigureCard LabelOne="Registrants"
-                                ValueOne="500"
-                                LabelTwo="Participants"
-                                ValueTwo="500"></BadgeFigureCard>
             <PieChartCard cardTitle="Education" cardLabel="Today" cardValue="250"></PieChartCard>
         </div>
     );
