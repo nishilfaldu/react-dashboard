@@ -1,5 +1,5 @@
 import './App.css';
-import StatsDashboard from './components/StatsDashboard';
+import YearlyDashboard from './components/YearlyDashboard';
 import {
   BrowserRouter as Router,
   Route,
@@ -25,9 +25,9 @@ function App() {
         </ul>
 
         <Switch>
-          <Route exact path='/live' component={StatsDashboard}></Route>
-          <Route exact path='/yearly' component={}></Route>
-          <Route exact path='/trends' component={}></Route>
+          <Route exact path='/live' component={YearlyDashboard}></Route>
+          <Route exact path='/yearly' component={YearlyDashboard}></Route>
+          <Route exact path='/trends' component={YearlyDashboard}></Route>
         </Switch>
       </div>
     </Router>

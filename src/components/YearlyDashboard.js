@@ -17,7 +17,7 @@ const StyledRow = styled.div`
     // align-items: center;
 `
 
-const StatsDashboard = function(){
+const YearlyDashboard = function(){
     return(
         <div>
             <StyledRow>
@@ -64,4 +64,4 @@ const StatsDashboard = function(){
     );
 }
 
-export default StatsDashboard;
+export default YearlyDashboard;
