@@ -10,8 +10,8 @@ const StyledButton = styled.button`
     width: ${(p) => p.theme.buttonWidth};
     border-radius: ${(p) => p.theme.borderRadius};
     font-size: ${(p) => p.theme.buttonLabelFontSize};
-    color: white;
-    background-color: black;
+    color: ${(p) => p.theme.colorTitle};
+    background: ${(p) => p.theme.colorButtonBackground};
 `
 
 const NavButton = function(props){
