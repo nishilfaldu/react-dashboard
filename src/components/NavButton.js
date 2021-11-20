@@ -12,6 +12,7 @@ const StyledButton = styled.button`
     font-size: ${(p) => p.theme.buttonLabelFontSize};
     color: ${(p) => p.theme.colorTitle};
     background: ${(p) => p.theme.colorButtonBackground};
+    border: none;
 `
 
 const NavButton = function(props){
