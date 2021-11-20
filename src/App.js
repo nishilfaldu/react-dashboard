@@ -14,7 +14,7 @@ function App() {
       {/* <StatsDashboard></StatsDashboard> */}
         <ul className="App-header">
           <li>
-            <Link to="/live">Live</Link>
+            <Link to="/live"><button>Link</button></Link>
           </li>
           <li>
             <Link to="/yearly">Yearly</Link>
