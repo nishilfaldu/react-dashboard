@@ -10,14 +10,14 @@ const StyledButton = styled.button`
     border-radius: 1rem;
     font-size: 1rem;
     font-family: "Poppins";
-    color: #ffffff;
-    background-color: #000000
+    color: white;
+    background-color: black;
 `
 
-const NavButton = function(){
+const NavButton = function(props){
     return(
         <div>
-            <StyledButton>Yearly</StyledButton>
+            <StyledButton>{props.label}</StyledButton>
         </div>
     );
 }

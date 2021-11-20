@@ -15,13 +15,13 @@ function App() {
       {/* <StatsDashboard></StatsDashboard> */}
         <ul className="App-header">
           <li>
-            <Link to="/live"><NavButton label="Live"></NavButton></Link>
+            <Link to="/live" style={{ textDecoration: 'none' }}><NavButton label="Live"></NavButton></Link>
           </li>
           <li>
-            <Link to="/yearly"><NavButton label="Yearly"></NavButton></Link>
+            <Link to="/yearly" style={{ textDecoration: 'none' }}><NavButton label="Yearly"></NavButton></Link>
           </li>
           <li>
-            <Link to="/trends"><NavButton label="Trends"></NavButton></Link>
+            <Link to="/trends" style={{ textDecoration: 'none' }}><NavButton label="Trends"></NavButton></Link>
           </li>
         </ul>
 
@@ -30,7 +30,6 @@ function App() {
           <Route exact path='/yearly' component={YearlyDashboard}></Route>
           <Route exact path='/trends' component={YearlyDashboard}></Route>
         </Switch>
-        <NavButton></NavButton>
       </div>
     </Router>
     
