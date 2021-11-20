@@ -6,16 +6,23 @@ import {
   Switch
 } from 'react-router-dom';
 import NavButton from '../NavButton';
+import styled from 'styled-components';
+
+const StyledRow = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+`
 
 const NavRoutes = function(){
     return(
         <div>
             <Router>
-                <div className="Navbar">
+                <StyledRow>
                     <Link to="/live" style={{ textDecoration: 'none' }}><NavButton label="Live"></NavButton></Link>
                     <Link to="/yearly" style={{ textDecoration: 'none' }}><NavButton label="Yearly"></NavButton></Link>
                     <Link to="/trends" style={{ textDecoration: 'none' }}><NavButton label="Trends"></NavButton></Link>
-                </div>
+                </StyledRow>
 
                 <Switch>
                     <Route exact path='/live' component={YearlyDashboard}></Route>
