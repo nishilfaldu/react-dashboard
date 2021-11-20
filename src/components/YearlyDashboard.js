@@ -10,11 +10,9 @@ import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import styled from 'styled-components';
 
 const StyledRow = styled.div`
-    // width: 40rem;
     display: flex;
     justify-content: space-evenly;
     padding-bottom: 1rem;
-    // align-items: center;
 `
 
 const YearlyDashboard = function(){

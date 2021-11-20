@@ -6,6 +6,7 @@ import {
   Link,
   Switch
 } from 'react-router-dom';
+import NavButton from './components/NavButton';
 
 function App() {
   return (
@@ -14,13 +15,13 @@ function App() {
       {/* <StatsDashboard></StatsDashboard> */}
         <ul className="App-header">
           <li>
-            <Link to="/live"><button>Link</button></Link>
+            <Link to="/live"><NavButton label="Live"></NavButton></Link>
           </li>
           <li>
-            <Link to="/yearly">Yearly</Link>
+            <Link to="/yearly"><NavButton label="Yearly"></NavButton></Link>
           </li>
           <li>
-            <Link to="/trends">Trends</Link>
+            <Link to="/trends"><NavButton label="Trends"></NavButton></Link>
           </li>
         </ul>
 
@@ -29,6 +30,7 @@ function App() {
           <Route exact path='/yearly' component={YearlyDashboard}></Route>
           <Route exact path='/trends' component={YearlyDashboard}></Route>
         </Switch>
+        <NavButton></NavButton>
       </div>
     </Router>
     
