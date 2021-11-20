@@ -1,15 +1,15 @@
 import react from 'react';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
+import theme from "../styling-properties/propNavButton";
 
 const StyledButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 2.5em;
-    width: 10rem;
-    border-radius: 1rem;
-    font-size: 1.1rem;
-    font-family: "Poppins";
+    height: ${(p) => p.theme.buttonHeight};
+    width: ${(p) => p.theme.buttonWidth};
+    border-radius: ${(p) => p.theme.borderRadius};
+    font-size: ${(p) => p.theme.buttonLabelFontSize};
     color: white;
     background-color: black;
 `
@@ -17,7 +17,9 @@ const StyledButton = styled.button`
 const NavButton = function(props){
     return(
         <div>
-            <StyledButton>{props.label}</StyledButton>
+            <ThemeProvider theme={theme}>
+                <StyledButton>{props.label}</StyledButton>
+            </ThemeProvider>
         </div>
     );
 }
