@@ -5,10 +5,10 @@ const StyledButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 2rem;
+    height: 2.5em;
     width: 10rem;
     border-radius: 1rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-family: "Poppins";
     color: white;
     background-color: black;

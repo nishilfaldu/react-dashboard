@@ -12,18 +12,11 @@ function App() {
   return (
     <Router>
       <div className="App">
-      {/* <StatsDashboard></StatsDashboard> */}
-        <ul className="App-header">
-          <li>
+        <div className="App-header">
             <Link to="/live" style={{ textDecoration: 'none' }}><NavButton label="Live"></NavButton></Link>
-          </li>
-          <li>
             <Link to="/yearly" style={{ textDecoration: 'none' }}><NavButton label="Yearly"></NavButton></Link>
-          </li>
-          <li>
             <Link to="/trends" style={{ textDecoration: 'none' }}><NavButton label="Trends"></NavButton></Link>
-          </li>
-        </ul>
+        </div>
 
         <Switch>
           <Route exact path='/live' component={YearlyDashboard}></Route>
