@@ -12,6 +12,8 @@ const StyledRow = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
 `
 
 const NavRoutes = function(){
