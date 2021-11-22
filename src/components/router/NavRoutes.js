@@ -21,13 +21,13 @@ const NavRoutes = function(){
         <div>
             <Router>
                 <StyledRow>
-                    <Link to="/live" style={{ textDecoration: 'none' }}><NavButton label="Live"></NavButton></Link>
+                    <Link to="/" style={{ textDecoration: 'none' }}><NavButton label="Live"></NavButton></Link>
                     <Link to="/yearly" style={{ textDecoration: 'none' }}><NavButton label="Yearly"></NavButton></Link>
                     <Link to="/trends" style={{ textDecoration: 'none' }}><NavButton label="Trends"></NavButton></Link>
                 </StyledRow>
 
                 <Switch>
-                    <Route exact path='/live' component={YearlyDashboard}></Route>
+                    <Route exact path='/' component={YearlyDashboard}></Route>
                     <Route exact path='/yearly' component={YearlyDashboard}></Route>
                     <Route exact path='/trends' component={YearlyDashboard}></Route>
                 </Switch>
