@@ -1,4 +1,5 @@
 import YearlyDashboard from '../YearlyDashboard';
+import LiveDashboard from '../LiveDashboard';
 import {
   BrowserRouter as Router,
   Route,
@@ -27,7 +28,7 @@ const NavRoutes = function(){
                 </StyledRow>
 
                 <Switch>
-                    <Route exact path='/' component={YearlyDashboard}></Route>
+                    <Route exact path='/' component={LiveDashboard}></Route>
                     <Route exact path='/yearly' component={YearlyDashboard}></Route>
                     <Route exact path='/trends' component={YearlyDashboard}></Route>
                 </Switch>
