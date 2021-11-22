@@ -13,7 +13,7 @@ const StyledButton = styled.button`
     color: ${(p) => p.theme.colorTitle};
     background: ${(p) => p.theme.colorButtonBackground};
     border: ${(p) => p.theme.buttonBorder};
-    cursor: pointer;
+    cursor: ${(p) => p.theme.buttonCursorProperty};
 `
 
 const NavButton = function(props){
