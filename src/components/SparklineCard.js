@@ -3,6 +3,10 @@ import styled, { ThemeProvider, css} from "styled-components";
 import Chart from 'react-apexcharts';
 import { useState } from 'react';
 
+const Some = styled.div`
+    background-image: "linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%)";
+`
+
 const SparklineCard = function(props){
 
     const [options, setOptions] = useState({
@@ -54,8 +58,12 @@ const SparklineCard = function(props){
     });
 
     return(
-        <div>
-            
+        <div style={{background: "black"}}>
+            <Some>
+            <Chart options={options} series={options.series} type="line" height="auto" width="100%"/>
+            </Some>
         </div>
     );
 }
+
+export default SparklineCard;
