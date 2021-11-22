@@ -54,9 +54,9 @@ const YearlyDashboard = function(){
             </StyledRow>
 
             <StyledRow>
-                <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue="250"></PieChartCard>
+                <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue="250" chartType={'pie'}></PieChartCard>
                 <BarChartCard cardTitle="Registrants" cardLabel="Today" cardValue="250"></BarChartCard>
-                <PieChartCard cardTitle="Education" cardLabel="Degrees" cardValue="250"></PieChartCard>
+                <PieChartCard cardTitle="Education" cardLabel="Degrees" cardValue="250" chartType={'pie'}></PieChartCard>
             </StyledRow>
         </div>
     );
