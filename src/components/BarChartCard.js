@@ -10,7 +10,7 @@ const ChartDiv = styled.div`
     align-items: center;
     justify-content: center;
 `
-const BarChartCard = function(){
+const BarChartCard = function(props){
 
   const [options, setOptions] = useState({
     chart: {
@@ -87,10 +87,10 @@ const BarChartCard = function(){
     return (
       <div>
         <ThemeProvider theme={theme}>    
-            <SimpleCard cardTitle="Registrants">
-                Week
+            <SimpleCard cardTitle={props.cardTitle}>
+                {props.cardLabel}
                 <br></br>
-                250
+                {props.cardValue}
                 <ChartDiv>
                   <Chart options={options} series={series} type="bar" height="auto" width="100%"/>
                 </ChartDiv>
