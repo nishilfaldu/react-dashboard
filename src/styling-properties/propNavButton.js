@@ -16,8 +16,11 @@ export default {
   buttonWidth: "10rem",
   borderRadius: "1rem",
   colorButtonBackground: "#1B1B1B",
+  buttonBorder: 'none',
+  buttonCursorProperty: 'pointer',
 
   // Properties of Button Title
   buttonLabelFontSize: "1.1rem",
   colorTitle: colorTitle,
+
 };

@@ -12,7 +12,8 @@ const StyledButton = styled.button`
     font-size: ${(p) => p.theme.buttonLabelFontSize};
     color: ${(p) => p.theme.colorTitle};
     background: ${(p) => p.theme.colorButtonBackground};
-    border: none;
+    border: ${(p) => p.theme.buttonBorder};
+    cursor: pointer;
 `
 
 const NavButton = function(props){
