@@ -14,12 +14,12 @@ const LiveDashboard = function(){
         <StyledRow>
             <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue="5" chartType={'pie'}></PieChartCard>
             <BarChartCard cardTitle="Countries" cardLabel="Count" cardValue="250"></BarChartCard>
-            <PieChartCard cardTitle="Gender" cardLabel="Female" cardValue="25%" chartType={'donut'}></PieChartCard>
+            <PieChartCard cardTitle="Education Levels" cardLabel="Degrees" cardValue="5" chartType={'pie'}></PieChartCard>
         </StyledRow>
 
         <StyledRow>
             <BarChartCard cardTitle="Majors" cardLabel="Count" cardValue="25"></BarChartCard>
-            <PieChartCard cardTitle="Education Levels" cardLabel="Degrees" cardValue="5" chartType={'pie'}></PieChartCard>
+            <PieChartCard cardTitle="Gender" cardLabel="Female" cardValue="25%" chartType={'donut'}></PieChartCard>
             <BarChartCard cardTitle="Hackathon Experience" cardLabel="Count" cardValue="25"></BarChartCard>
         </StyledRow>
         </div>
