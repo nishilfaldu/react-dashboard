@@ -9,19 +9,19 @@ import '../css/TabButton.css'
 const TabButton = function(props){
     return(
         <div style={{display: 'flex', flexDirection: 'row'}}>
-            <label for='input-1'>
+            <label for={props.forLabel}>
                 <input
                 type='radio'
-                id='input-1'
+                id={props.forLabel}
                 name='group'
                 />
                 <span className='btn'>
                     <span className='btn-icon'><PersonAddAlt1Icon></PersonAddAlt1Icon></span>
-                    <span className='btn-text'>Registered</span>
+                    <span className='btn-text'>{props.textLabel}</span>
                 </span>
             </label>
 
-            <label for='input-2'>
+            {/* <label for='input-2'>
                 <input
                 type='radio'
                 id='input-2'
@@ -43,7 +43,7 @@ const TabButton = function(props){
                     <span className='btn-icon'><CheckIcon></CheckIcon></span>
                     <span className='btn-text'>Checked In</span>
                 </span>
-            </label>
+            </label> */}
         </div>
     );
 }

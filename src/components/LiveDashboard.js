@@ -3,6 +3,7 @@ import PieChartCard from './PieChartCard';
 import BarChartCard from './BarChartCard';
 import SparklineCard from './SparklineCard';
 import TabButton from './TabButton';
+import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 
 const StyledRow = styled.div`
     display: flex;
@@ -10,10 +11,23 @@ const StyledRow = styled.div`
     padding-bottom: 1rem;
 `
 
+const StyledTabRow = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 1rem;
+`
+// const StyledColumn = styled.div`
+//     display: flex;
+//     justify-content: space-evenly;
+//     padding-bottom: 1rem;
+// `
+
 const LiveDashboard = function(){
     return(
         <div>
-            <TabButton></TabButton>
+            <StyledTabRow>
+            <TabButton forLabel="input-1" textLabel="Registered"></TabButton>
+            </StyledTabRow>
             <StyledRow>
                 <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue="5" chartType={'pie'}></PieChartCard>
                 <BarChartCard cardTitle="Countries" cardLabel="Count" cardValue="250"></BarChartCard>
