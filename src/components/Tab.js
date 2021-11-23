@@ -5,12 +5,19 @@ import HowToRegIcon from '@mui/icons-material/HowToReg';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 import TabButton from './TabButton';
 
+const StyledTabRow = styled.div`
+    display: flex;
+    justify-content: space-between;
+`
+
 const Tab = function(props){
     return(
         <div>
-            <TabButton forLabel='input-1' textLabel='Registered' buttonIcon={<PersonAddAlt1Icon/>}></TabButton>
-            <TabButton forLabel='input-2' textLabel='Confirmed' buttonIcon={<HowToRegIcon/>}></TabButton>
-            <TabButton forLabel='input-3' textLabel='Checked In' buttonIcon={<CheckIcon/>}></TabButton>
+            <StyledTabRow>
+                <TabButton forLabel='input-1' textLabel='Registered' buttonIcon={<PersonAddAlt1Icon/>} marginRight='17.5rem'></TabButton>
+                <TabButton forLabel='input-2' textLabel='Confirmed' buttonIcon={<HowToRegIcon/>} marginRight='17.5rem'></TabButton>
+                <TabButton forLabel='input-3' textLabel='Checked In' buttonIcon={<CheckIcon/>}></TabButton>
+            </StyledTabRow>
         </div>
     );
 }   
