@@ -7,7 +7,7 @@ import './TabButton.css'
 
 const TabButton = function(props){
     return(
-        <div style={{backgroundColor: '#000000'}}>
+        <div style={{display: 'flex', flexDirection: 'row'}}>
             <label for='input-1'>
                 <input
                 type='radio'
@@ -15,7 +15,7 @@ const TabButton = function(props){
                 name='group'
                 />
                 <span className='btn'>
-                    <span className='btn-icon'></span>
+                    <span className='btn-icon'><HowToRegIcon></HowToRegIcon></span>
                     <span className='btn-text'>Registered</span>
                 </span>
             </label>
@@ -27,7 +27,7 @@ const TabButton = function(props){
                 name='group'
                 />
                 <span className='btn'>
-                    <span className='btn-icon'></span>
+                    <span className='btn-icon'><HowToRegIcon></HowToRegIcon></span>
                     <span className='btn-text'>Confirmed</span>
                 </span>
             </label>
@@ -39,7 +39,7 @@ const TabButton = function(props){
                 name='group'
                 />
                 <span className='btn'>
-                    <span className='btn-icon'></span>
+                    <span className='btn-icon'><HowToRegIcon></HowToRegIcon></span>
                     <span className='btn-text'>Checked In</span>
                 </span>
             </label>
