@@ -21,7 +21,8 @@ const TabButton = function(props){
                 type='radio'
                 id='input-1'
                 name='group'
-                />
+                // disappear element by scale(0)
+                style={{position: 'absolute',transform: 'scale(0)'}}/>
                 <SpanButton>
                 {/* <span className='btn'> */}
                     <span className='btn-icon uil uil-chart'/>
