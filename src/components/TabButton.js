@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
-import ComputerIcon from '@mui/icons-material/Computer';
+// import ComputerIcon from '@mui/icons-material/Computer';
+import CheckIcon from '@mui/icons-material/Check';
+import HowToRegIcon from '@mui/icons-material/HowToReg';
 
 
 const SpanButton = styled.span`
@@ -20,6 +22,18 @@ const SpanButtonIcon = styled.span`
     transition: all 0.35s;
 `
 
+const SpanButtonText = styled.span`
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%) translateX(1.25rem);
+    // both props below hides an elements
+    visibility: hidden;
+    opacity: 0;
+    font-size: 0.875rem;
+    color: #fff;
+    transition: all 0.35s;
+`
 
 const TabButton = function(props){
     return(
@@ -31,12 +45,10 @@ const TabButton = function(props){
                 name='group'
                 // disappear element by scale(0)
                 style={{position: 'absolute',transform: 'scale(0)'}}/>
-                <SpanButton>
-                {/* <span className='btn'> */}
+                <span className='btn'>
                     <span className='btn-icon uil uil-chart'/>
                     <span className='btn-text'>Registered</span>
-                {/* </span> */}
-                </SpanButton>
+                </span>
             </label>
         </div>
     );
