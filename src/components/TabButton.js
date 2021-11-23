@@ -3,10 +3,11 @@ import styled from "styled-components";
 // import ComputerIcon from '@mui/icons-material/Computer';
 import CheckIcon from '@mui/icons-material/Check';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
+import './TabButton.css'
 
 const TabButton = function(props){
     return(
-        <div styled={{backgroundColor: '#FF0000'}}>
+        <div style={{backgroundColor: '#000000'}}>
             <label for='input-1'>
                 <input
                 type='radio'
@@ -14,7 +15,7 @@ const TabButton = function(props){
                 name='group'
                 />
                 <span className='btn'>
-                    <span className='btn-icon'/>
+                    <span className='btn-icon'></span>
                     <span className='btn-text'>Registered</span>
                 </span>
             </label>
@@ -26,7 +27,7 @@ const TabButton = function(props){
                 name='group'
                 />
                 <span className='btn'>
-                    <span className='btn-icon'/>
+                    <span className='btn-icon'></span>
                     <span className='btn-text'>Confirmed</span>
                 </span>
             </label>
@@ -38,7 +39,7 @@ const TabButton = function(props){
                 name='group'
                 />
                 <span className='btn'>
-                    <span className='btn-icon'/>
+                    <span className='btn-icon'></span>
                     <span className='btn-text'>Checked In</span>
                 </span>
             </label>
