@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import PieChartCard from './PieChartCard';
 import BarChartCard from './BarChartCard';
 import SparklineCard from './SparklineCard';
+import TabButton from './TabButton';
 
 const StyledRow = styled.div`
     display: flex;
@@ -24,6 +25,7 @@ const LiveDashboard = function(){
                 <BarChartCard cardTitle="Hackathon Experience" cardLabel="Count" cardValue="25"></BarChartCard>
             </StyledRow>
             {/* <SparklineCard></SparklineCard> */}
+            <TabButton></TabButton>
         </div>
     );
 }
