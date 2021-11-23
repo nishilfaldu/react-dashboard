@@ -12,6 +12,7 @@
 }
 
 .btn-icon {
+    padding-top: 0.2rem;
     font-size: 1.5rem;
     transition: all 0.35s;
 }
@@ -20,7 +21,7 @@
     position: absolute;
     left: 0.5rem;
     top: 50%;
-    transform: translateY(-50%) translateX(1.25rem);
+    /* transform: translateY(-50%) translateX(0rem); */
     /* both props below hides an elements */
     visibility: hidden;
     opacity: 0;

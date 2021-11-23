@@ -13,6 +13,7 @@ const StyledRow = styled.div`
 const LiveDashboard = function(){
     return(
         <div>
+            <TabButton></TabButton>
             <StyledRow>
                 <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue="5" chartType={'pie'}></PieChartCard>
                 <BarChartCard cardTitle="Countries" cardLabel="Count" cardValue="250"></BarChartCard>
@@ -25,7 +26,6 @@ const LiveDashboard = function(){
                 <BarChartCard cardTitle="Hackathon Experience" cardLabel="Count" cardValue="25"></BarChartCard>
             </StyledRow>
             {/* <SparklineCard></SparklineCard> */}
-            <TabButton></TabButton>
         </div>
     );
 }

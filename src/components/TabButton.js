@@ -3,7 +3,8 @@ import styled from "styled-components";
 // import ComputerIcon from '@mui/icons-material/Computer';
 import CheckIcon from '@mui/icons-material/Check';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
-import './TabButton.css'
+import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
+import '../css/TabButton.css'
 
 const TabButton = function(props){
     return(
@@ -15,7 +16,7 @@ const TabButton = function(props){
                 name='group'
                 />
                 <span className='btn'>
-                    <span className='btn-icon'><HowToRegIcon></HowToRegIcon></span>
+                    <span className='btn-icon'><PersonAddAlt1Icon></PersonAddAlt1Icon></span>
                     <span className='btn-text'>Registered</span>
                 </span>
             </label>
@@ -39,7 +40,7 @@ const TabButton = function(props){
                 name='group'
                 />
                 <span className='btn'>
-                    <span className='btn-icon'><HowToRegIcon></HowToRegIcon></span>
+                    <span className='btn-icon'><CheckIcon></CheckIcon></span>
                     <span className='btn-text'>Checked In</span>
                 </span>
             </label>
