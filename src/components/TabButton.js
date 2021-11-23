@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
+import ComputerIcon from '@mui/icons-material/Computer';
+
 
 const SpanButton = styled.span`
     positive: relative;
@@ -12,6 +14,12 @@ const SpanButton = styled.span`
     padding: 0;
     border-radius: 2rem;
 `
+
+const SpanButtonIcon = styled.span`
+    font-size: 1.5rem;
+    transition: all 0.35s;
+`
+
 
 const TabButton = function(props){
     return(
