@@ -8,7 +8,7 @@ import '../css/TabButton.css'
 
 const TabButton = function(props){
     return(
-        <div style={{display: 'flex', flexDirection: 'row'}}>
+        <div>
             <label for={props.forLabel}>
                 <input
                 type='radio'
@@ -16,7 +16,7 @@ const TabButton = function(props){
                 name='group'
                 />
                 <span className='btn'>
-                    <span className='btn-icon'><PersonAddAlt1Icon></PersonAddAlt1Icon></span>
+                    <span className='btn-icon'>{props.buttonIcon}</span>
                     <span className='btn-text'>{props.textLabel}</span>
                 </span>
             </label>

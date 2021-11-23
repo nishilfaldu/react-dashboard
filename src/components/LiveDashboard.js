@@ -4,6 +4,7 @@ import BarChartCard from './BarChartCard';
 import SparklineCard from './SparklineCard';
 import TabButton from './TabButton';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
+import Tab from './Tab'
 
 const StyledRow = styled.div`
     display: flex;
@@ -26,7 +27,7 @@ const LiveDashboard = function(){
     return(
         <div>
             <StyledTabRow>
-            <TabButton forLabel="input-1" textLabel="Registered"></TabButton>
+            <Tab></Tab>
             </StyledTabRow>
             <StyledRow>
                 <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue="5" chartType={'pie'}></PieChartCard>
