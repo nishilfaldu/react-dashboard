@@ -1,0 +1,50 @@
+.btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #ffffff;
+    height: 3rem;
+    padding: 0;
+    border-radius: 2rem;
+}
+
+.btn-icon {
+    font-size: 1.5rem;
+    transition: all 0.35s;
+}
+
+.btn-text {
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%) translateX(1.25rem);
+    /* both props below hides an elements */
+    visibility: hidden;
+    opacity: 0;
+    font-size: 0.875rem;
+    color: #fff;
+    transition: all 0.35s;
+}
+
+input {
+    position: absolute;
+    /* disappear element by scale(0) */
+    transform: scale(0);
+}
+
+input:checked ~ .btn {
+    background: #867c48;
+}
+
+input:checked ~ .btn .btn-text {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-50%) translateX(2.5rem);
+}
+
+input:checked ~ .btn .btn-icon {
+    transform: translateX(-1.5rem);
+}
+
