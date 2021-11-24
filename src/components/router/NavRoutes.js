@@ -9,6 +9,7 @@ import {
 import NavButton from '../NavButton';
 import styled from 'styled-components';
 import LivePage from '../LivePage';
+import YearlyPage from '../YearlyPage';
 
 const StyledRow = styled.div`
     display: flex;
@@ -30,7 +31,7 @@ const NavRoutes = function(){
 
                 <Switch>
                     <Route exact path='/' component={LivePage}></Route>
-                    <Route exact path='/yearly' component={YearlyDashboard}></Route>
+                    <Route exact path='/yearly' component={YearlyPage}></Route>
                     <Route exact path='/trends' component={YearlyDashboard}></Route>
                 </Switch>
             </Router>
