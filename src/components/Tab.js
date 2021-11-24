@@ -10,11 +10,15 @@ const StyledTabRow = styled.div`
     justify-content: space-between;
 `
 
+const handleChange = function(){
+    console.log('Hello, World')
+}
+
 const Tab = function(props){
     return(
         <div>
             <StyledTabRow>
-                <TabButton forLabel='input-1' textLabel='Registered' buttonIcon={<PersonAddAlt1Icon/>}></TabButton>
+                <TabButton forLabel='input-1' textLabel='Registered' buttonIcon={<PersonAddAlt1Icon/>} onClick={handleChange}></TabButton>
                 <TabButton forLabel='input-2' textLabel='Confirmed' buttonIcon={<HowToRegIcon/>}></TabButton>
                 <TabButton forLabel='input-3' textLabel='Checked In' buttonIcon={<CheckIcon/>}></TabButton>
             </StyledTabRow>
