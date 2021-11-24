@@ -12,23 +12,12 @@ const StyledRow = styled.div`
     padding-bottom: 1rem;
 `
 
-const StyledTabRow = styled.div`
-    display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 1rem;
-`
-// const StyledColumn = styled.div`
-//     display: flex;
-//     justify-content: space-evenly;
-//     padding-bottom: 1rem;
-// `
-
 const LiveDashboard = function(){
     return(
         <div>
-            <StyledTabRow>
-            <Tab></Tab>
-            </StyledTabRow>
+            <StyledRow>
+                <Tab></Tab>
+            </StyledRow>
             <StyledRow>
                 <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue="5" chartType={'pie'}></PieChartCard>
                 <BarChartCard cardTitle="Countries" cardLabel="Count" cardValue="250"></BarChartCard>
