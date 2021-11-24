@@ -1,10 +1,6 @@
 import styled from 'styled-components';
-import PieChartCard from './PieChartCard';
-import BarChartCard from './BarChartCard';
-import SparklineCard from './SparklineCard';
-import TabButton from './TabButton';
-import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
-import Tab from './Tab'
+import PieChartCard from '../cards/charts/PieChartCard';
+import BarChartCard from '../cards/charts/BarChartCard';
 
 const StyledRow = styled.div`
     display: flex;

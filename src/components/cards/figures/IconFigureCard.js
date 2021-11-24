@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { ThemeProvider } from "styled-components";
-import theme from "../styling-properties/propIconCard";
+import theme from "../../themes/propIconCard";
 
 const IconCard = styled.div`
     height: ${(p) => p.theme.cardHeight};

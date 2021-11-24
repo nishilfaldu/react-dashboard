@@ -1,16 +1,15 @@
-import YearlyDashboard from '../YearlyDashboard';
-import LiveDashboard from '../LiveDashboard';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
   Link,
   Switch
 } from 'react-router-dom';
-import NavButton from '../NavButton';
+import NavButton from '../buttons/NavButton';
 import styled from 'styled-components';
-import LivePage from '../LivePage';
-import YearlyPage from '../YearlyPage';
-import TrendsPage from '../TrendsPage';
+import LivePage from '../pages/LivePage';
+import YearlyPage from '../pages/YearlyPage';
+import TrendsPage from '../pages/TrendsPage';
 
 const StyledRow = styled.div`
     display: flex;

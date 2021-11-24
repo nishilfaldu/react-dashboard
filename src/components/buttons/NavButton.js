@@ -1,6 +1,6 @@
-import react from 'react';
+import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import theme from "../styling-properties/propNavButton";
+import theme from "../themes/propNavButton";
 
 const StyledButton = styled.button`
     display: flex;

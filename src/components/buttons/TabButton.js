@@ -1,15 +1,10 @@
 import React from 'react';
-import styled from "styled-components";
-// import ComputerIcon from '@mui/icons-material/Computer';
-import CheckIcon from '@mui/icons-material/Check';
-import HowToRegIcon from '@mui/icons-material/HowToReg';
-import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
-import '../css/TabButton.css'
+import '../../assets/css/TabButton.css';
 
 const TabButton = function(props){
     return(
         <div>
-            <label for={props.forLabel}>
+            <label htmlFor={props.forLabel}>
                 <input
                 type='radio'
                 id={props.forLabel}

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const Card = styled.div`
     height: ${(p) => p.theme.cardHeight};

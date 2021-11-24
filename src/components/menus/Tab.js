@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import CheckIcon from '@mui/icons-material/Check';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
-import TabButton from './TabButton';
+import TabButton from '../buttons/TabButton';
 
 const StyledTabRow = styled.div`
     display: flex;

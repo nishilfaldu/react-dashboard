@@ -1,5 +1,5 @@
 import React from 'react';
-import YearlyDashboard from './YearlyDashboard';
+import YearlyDashboard from '../dashboards/YearlyDashboard';
 
 const YearlyPage = function(props){
     return(

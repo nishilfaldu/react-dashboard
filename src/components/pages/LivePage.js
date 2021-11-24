@@ -1,6 +1,6 @@
 import React from 'react';
-import LiveDashboard from './LiveDashboard';
-import Tab from './Tab'
+import LiveDashboard from '../dashboards/LiveDashboard';
+import Tab from '../menus/Tab'
 import styled from 'styled-components';
 
 const StyledRow = styled.div`

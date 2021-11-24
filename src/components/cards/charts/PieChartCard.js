@@ -1,7 +1,7 @@
 import React from "react";
-import styled, { ThemeProvider, css } from "styled-components";
-import SimpleCard from "./SimpleCard.js";
-import theme from "../styling-properties/propPieChart"
+import styled, { ThemeProvider } from "styled-components";
+import SimpleCard from "../card/SimpleCard.js";
+import theme from "../../themes/propPieChart"
 import Chart from 'react-apexcharts';
 import { useState } from "react";
 
