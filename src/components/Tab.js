@@ -14,8 +14,8 @@ const Tab = function(props){
     return(
         <div>
             <StyledTabRow>
-                <TabButton forLabel='input-1' textLabel='Registered' buttonIcon={<PersonAddAlt1Icon/>} marginRight='17.5rem'></TabButton>
-                <TabButton forLabel='input-2' textLabel='Confirmed' buttonIcon={<HowToRegIcon/>} marginRight='17.5rem'></TabButton>
+                <TabButton forLabel='input-1' textLabel='Registered' buttonIcon={<PersonAddAlt1Icon/>}></TabButton>
+                <TabButton forLabel='input-2' textLabel='Confirmed' buttonIcon={<HowToRegIcon/>}></TabButton>
                 <TabButton forLabel='input-3' textLabel='Checked In' buttonIcon={<CheckIcon/>}></TabButton>
             </StyledTabRow>
         </div>
