@@ -16,9 +16,6 @@ const LiveDashboard = function(){
     return(
         <div>
             <StyledRow>
-                <Tab></Tab>
-            </StyledRow>
-            <StyledRow>
                 <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue="5" chartType={'pie'}></PieChartCard>
                 <BarChartCard cardTitle="Countries" cardLabel="Count" cardValue="250"></BarChartCard>
                 <PieChartCard cardTitle="Education Levels" cardLabel="Degrees" cardValue="5" chartType={'pie'}></PieChartCard>
