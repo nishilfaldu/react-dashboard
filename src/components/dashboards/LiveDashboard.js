@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import PieChartCard from '../cards/charts/PieChartCard';
 import BarChartCard from '../cards/charts/BarChartCard';
+import { useState } from 'react';
 
 const StyledRow = styled.div`
     display: flex;
@@ -9,6 +10,14 @@ const StyledRow = styled.div`
 `
 
 const LiveDashboard = function(){
+    const [currDashboardState, setDashboardState] = useState({
+        ethnicityValue: '5',
+        countryValue: '5',
+        educationValue: '5',
+        majorsValue: '5',
+        genderValue: '5',
+        experienceValue: '5'
+    });
     return(
         <div>
             <StyledRow>
