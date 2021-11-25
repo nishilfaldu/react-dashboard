@@ -9,11 +9,15 @@ const StyledRow = styled.div`
     padding-bottom: 1rem;
 `
 
+const handleChange = function(){
+    console.log('Hello, World!')
+}
+
 const LivePage = function(props){
     return(
         <div>
             <StyledRow>
-                <Tab></Tab>
+                <Tab onClick={handleChange}></Tab>
             </StyledRow>
             <LiveDashboard></LiveDashboard>
         </div>
