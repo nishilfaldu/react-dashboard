@@ -16,16 +16,28 @@ const StyledRow = styled.div`
 
 const LivePage = function(props){
 
-    const [data, setData] = useState('0');
+    const [data, setData] = useState('registered');
 
-    // if (data = 'input-1')
+    let toRender;
+    if (data === 'registered'){
+        toRender = <LiveDashboard></LiveDashboard>;
+    }
+    else if (data === 'confirmed'){
+        toRender = <div style={{color: 'white'}}>CONFIRMED DASHBOARD</div>;
+    }
+    else if (data === 'checkedin'){
+        toRender = <div style={{color: 'white'}}>CHECKED IN DASHBOARD</div>;
+    }
+    else {
+        toRender = '404!'
+    }
+
     return(
         <div>
             <StyledRow>
                 <Tab onClick={setData}></Tab>
             </StyledRow>
-            {/* {data === 'input-1' ? <LiveDashboard></LiveDashboard> : <div>NADA</div>} */}
-            <LiveDashboard></LiveDashboard>
+            {toRender}
         </div>
     );
 }
