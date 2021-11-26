@@ -10,14 +10,6 @@ const StyledRow = styled.div`
 `
 
 const LiveDashboard = function(){
-    const [currDashboardState, setDashboardState] = useState({
-        ethnicityValue: '5',
-        countryValue: '5',
-        educationValue: '5',
-        majorsValue: '5',
-        genderValue: '5',
-        experienceValue: '5'
-    });
     return(
         <div>
             <StyledRow>
