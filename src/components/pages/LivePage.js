@@ -16,18 +16,14 @@ const StyledRow = styled.div`
 
 const LivePage = function(props){
 
-    const [data, setData] = useState('');
-
-    const handleChange = (passedData) => {
-        // setData(passedData);
-        console.log(passedData);
-    };
+    const [data, setData] = useState('0');
 
     return(
         <div>
             <StyledRow>
-                <Tab onClick={handleChange}></Tab>
+                <Tab onClick={setData}></Tab>
             </StyledRow>
+            {data}
             <LiveDashboard></LiveDashboard>
         </div>
     );
