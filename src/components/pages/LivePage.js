@@ -18,12 +18,13 @@ const LivePage = function(props){
 
     const [data, setData] = useState('0');
 
+    // if (data = 'input-1')
     return(
         <div>
             <StyledRow>
                 <Tab onClick={setData}></Tab>
             </StyledRow>
-            {data}
+            {/* {data === 'input-1' ? <LiveDashboard></LiveDashboard> : <div>NADA</div>} */}
             <LiveDashboard></LiveDashboard>
         </div>
     );
