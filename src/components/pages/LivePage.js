@@ -10,17 +10,18 @@ const StyledRow = styled.div`
     padding-bottom: 1rem;
 `
 
-// const handleChange = function(whichTab){
-//     console.log(whichTab);
-// }
-
 const LivePage = function(props){
 
-    const [data, setData] = useState('registered');
+    const [data, setData] = useState('0');
 
     let toRender;
     if (data === 'registered'){
-        toRender = <LiveDashboard></LiveDashboard>;
+        toRender = <LiveDashboard ethnicityVal='5'
+                                    countriesVal='5'
+                                    degreesVal='5'
+                                    majorsVal='5'
+                                    genderVal='5'
+                                    hackExperienceVal='5'></LiveDashboard>;
     }
     else if (data === 'confirmed'){
         toRender = <div style={{color: 'white'}}>CONFIRMED DASHBOARD</div>;
@@ -29,7 +30,7 @@ const LivePage = function(props){
         toRender = <div style={{color: 'white'}}>CHECKED IN DASHBOARD</div>;
     }
     else {
-        toRender = '404!'
+        toRender = <div style={{color: 'white'}}>WELCOME TO THE LIVE DASHBOARD!</div>
     }
 
     return(

@@ -9,19 +9,19 @@ const StyledRow = styled.div`
     padding-bottom: 1rem;
 `
 
-const LiveDashboard = function(){
+const LiveDashboard = function(props){
     return(
         <div>
             <StyledRow>
-                <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue="5" chartType={'pie'}></PieChartCard>
-                <BarChartCard cardTitle="Countries" cardLabel="Count" cardValue="250"></BarChartCard>
-                <PieChartCard cardTitle="Education Levels" cardLabel="Degrees" cardValue="5" chartType={'pie'}></PieChartCard>
+                <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue={props.ethnicityVal} chartType={'pie'}></PieChartCard>
+                <BarChartCard cardTitle="Countries" cardLabel="Count" cardValue={props.countriesVal}></BarChartCard>
+                <PieChartCard cardTitle="Education Levels" cardLabel="Degrees" cardValue={props.degreesVal} chartType={'pie'}></PieChartCard>
             </StyledRow>
 
             <StyledRow>
-                <BarChartCard cardTitle="Majors" cardLabel="Count" cardValue="25"></BarChartCard>
-                <PieChartCard cardTitle="Gender" cardLabel="Female" cardValue="25%" chartType={'donut'}></PieChartCard>
-                <BarChartCard cardTitle="Hackathon Experience" cardLabel="Count" cardValue="25"></BarChartCard>
+                <BarChartCard cardTitle="Majors" cardLabel="Count" cardValue={props.majorsVal}></BarChartCard>
+                <PieChartCard cardTitle="Gender" cardLabel="Female" cardValue={props.genderVal} chartType={'donut'}></PieChartCard>
+                <BarChartCard cardTitle="Hackathon Experience" cardLabel="Count" cardValue={props.hackExperienceVal}></BarChartCard>
             </StyledRow>
             {/* <SparklineCard></SparklineCard> */}
         </div>
