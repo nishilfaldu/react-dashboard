@@ -3,6 +3,9 @@ import LiveDashboard from '../dashboards/LiveDashboard';
 import Tab from '../menus/Tab'
 import styled from 'styled-components';
 import { useState } from 'react';
+import CheckIcon from '@mui/icons-material/Check';
+import HowToRegIcon from '@mui/icons-material/HowToReg';
+import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 
 const StyledRow = styled.div`
     display: flex;
@@ -12,6 +15,12 @@ const StyledRow = styled.div`
 
 const LivePage = function(props){
 
+    const tabButtonProps = {
+        forLabel: ['registered', 'confirmed', 'checkedin'],
+        textLabel: ['Registered', 'Confirmed', 'Checked In'],
+        buttonIcon: [<PersonAddAlt1Icon/>, <HowToRegIcon/>, <CheckIcon/>]
+    };
+    
     const [data, setData] = useState('0');
 
     let toRender;
