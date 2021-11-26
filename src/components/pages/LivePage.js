@@ -24,10 +24,20 @@ const LivePage = function(props){
                                     hackExperienceVal='5'></LiveDashboard>;
     }
     else if (data === 'confirmed'){
-        toRender = <div style={{color: 'white'}}>CONFIRMED DASHBOARD</div>;
+        toRender = <LiveDashboard ethnicityVal='50'
+                                countriesVal='50'
+                                degreesVal='50'
+                                majorsVal='50'
+                                genderVal='50'
+                                hackExperienceVal='50'></LiveDashboard>;
     }
     else if (data === 'checkedin'){
-        toRender = <div style={{color: 'white'}}>CHECKED IN DASHBOARD</div>;
+        toRender = <LiveDashboard ethnicityVal='500'
+                                    countriesVal='500'
+                                    degreesVal='500'
+                                    majorsVal='500'
+                                    genderVal='500'
+                                    hackExperienceVal='500'></LiveDashboard>;
     }
     else {
         toRender = <div style={{color: 'white'}}>WELCOME TO THE LIVE DASHBOARD!</div>
