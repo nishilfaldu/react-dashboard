@@ -14,9 +14,9 @@ const Tab = function(props){
     return(
         <div>
             <StyledTabRow>
-                <TabButton forLabel='input-1' textLabel='Registered' buttonIcon={<PersonAddAlt1Icon/>} onClick={props.onClick}></TabButton>
-                <TabButton forLabel='input-2' textLabel='Confirmed' buttonIcon={<HowToRegIcon/>}></TabButton>
-                <TabButton forLabel='input-3' textLabel='Checked In' buttonIcon={<CheckIcon/>}></TabButton>
+                <TabButton forLabel='input-1' textLabel='Registered' buttonIcon={<PersonAddAlt1Icon/>} onClickDoThis={props.onClick}></TabButton>
+                <TabButton forLabel='input-2' textLabel='Confirmed' buttonIcon={<HowToRegIcon/>} onClickDoThis={props.onClick}></TabButton>
+                <TabButton forLabel='input-3' textLabel='Checked In' buttonIcon={<CheckIcon/>} onClickDoThis={props.onClick}></TabButton>
             </StyledTabRow>
         </div>
     );

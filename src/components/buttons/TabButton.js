@@ -10,7 +10,7 @@ const TabButton = function(props){
                 id={props.forLabel}
                 name='group'
                 />
-                <span className='btn' onClick={props.onClick}>
+                <span className='btn' onClick={()=>props.onClickDoThis(props.forLabel)}>
                     <span className='btn-icon'>{props.buttonIcon}</span>
                     <span className='btn-text'>{props.textLabel}</span>
                 </span>

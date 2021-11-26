@@ -2,6 +2,7 @@ import React from 'react';
 import LiveDashboard from '../dashboards/LiveDashboard';
 import Tab from '../menus/Tab'
 import styled from 'styled-components';
+import { useState } from 'react';
 
 const StyledRow = styled.div`
     display: flex;
@@ -9,11 +10,19 @@ const StyledRow = styled.div`
     padding-bottom: 1rem;
 `
 
-const handleChange = function(){
-    console.log('Hello, World!')
-}
+// const handleChange = function(whichTab){
+//     console.log(whichTab);
+// }
 
 const LivePage = function(props){
+
+    const [data, setData] = useState('');
+
+    const handleChange = (passedData) => {
+        // setData(passedData);
+        console.log(passedData);
+    };
+
     return(
         <div>
             <StyledRow>
