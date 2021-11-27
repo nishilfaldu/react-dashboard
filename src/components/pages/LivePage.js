@@ -21,7 +21,7 @@ const LivePage = function(props){
         buttonIcon: [<PersonAddAlt1Icon/>, <HowToRegIcon/>, <CheckIcon/>]
     };
 
-    const [data, setData] = useState('0');
+    const [data, setData] = useState('registered');
 
     let toRender;
     if (data === 'registered'){

@@ -22,7 +22,7 @@ const TrendsPage = function(props){
         buttonIcon: [<PeopleAltIcon/>, <AnalyticsIcon/>, <SchoolIcon/>]
     };
 
-    const [data, setData] = useState('0');
+    const [data, setData] = useState('participation');
 
     let toRender;
     if (data === 'participation'){
