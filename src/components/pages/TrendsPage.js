@@ -4,6 +4,9 @@ import styled from 'styled-components';
 import { useState } from 'react';
 import Tab from '../menus/Tab';
 import LiveDashboard from '../dashboards/LiveDashboard';
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
+import AnalyticsIcon from '@mui/icons-material/Analytics';
+import SchoolIcon from '@mui/icons-material/School';
 
 const StyledRow = styled.div`
     display: flex;
@@ -12,6 +15,12 @@ const StyledRow = styled.div`
 `
 
 const TrendsPage = function(props){
+
+    const tabButtonProps = {
+        forLabel: ['participation', 'demographics', 'education'],
+        textLabel: ['Participation', 'Demographics', 'Education'],
+        buttonIcon: [<PeopleAltIcon/>, <AnalyticsIcon/>, <SchoolIcon/>]
+    };
 
     const [data, setData] = useState('0');
 
@@ -47,7 +56,7 @@ const TrendsPage = function(props){
     return(
         <div>
             <StyledRow>
-                <Tab onClick={setData}></Tab>
+                <Tab onClick={setData} tabButtonAttributes={tabButtonProps}></Tab>
             </StyledRow>
             {toRender}
             {/* <TrendsDashboard></TrendsDashboard> */}

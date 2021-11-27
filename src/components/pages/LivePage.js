@@ -20,7 +20,7 @@ const LivePage = function(props){
         textLabel: ['Registered', 'Confirmed', 'Checked In'],
         buttonIcon: [<PersonAddAlt1Icon/>, <HowToRegIcon/>, <CheckIcon/>]
     };
-    
+
     const [data, setData] = useState('0');
 
     let toRender;
@@ -55,7 +55,7 @@ const LivePage = function(props){
     return(
         <div>
             <StyledRow>
-                <Tab onClick={setData}></Tab>
+                <Tab onClick={setData} tabButtonAttributes={tabButtonProps}></Tab>
             </StyledRow>
             {toRender}
         </div>
