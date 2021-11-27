@@ -13,7 +13,7 @@ const ChartDiv = styled.div`
 
 const LineChartCard = function(props){
 
-    const [option, setOptions] = useState({
+    const [options, setOptions] = useState({
         series: [
             {
                 name: 'Registrants',
@@ -73,5 +73,21 @@ const LineChartCard = function(props){
                 },
             }
         }
-    });
+    );
+
+    return(
+        <div>
+            <ThemeProvider theme={theme}>
+                <SimpleCard cardTitle={props.cardTitle}>
+                    {props.cardLabel}
+                    <br></br>
+                    {props.cardValue}
+                    <ChartDiv>
+                        <Chart options={options} series={options.series} type="line" height="auto" width="100%"/>
+                    </ChartDiv>
+                </SimpleCard>
+            </ThemeProvider>
+        </div>
+    );
 }
+
