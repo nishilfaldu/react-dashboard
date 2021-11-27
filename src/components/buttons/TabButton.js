@@ -9,7 +9,7 @@ const TabButton = function(props){
                 type='radio'
                 id={props.forLabel}
                 name='group'
-                />
+                defaultChecked={props.checked}/>
                 <span className='btn' onClick={()=>props.onClickDoThis(props.forLabel)}>
                     <span className='btn-icon'>{props.buttonIcon}</span>
                     <span className='btn-text'>{props.textLabel}</span>
