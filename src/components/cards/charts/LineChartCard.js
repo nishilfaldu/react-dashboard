@@ -91,3 +91,4 @@ const LineChartCard = function(props){
     );
 }
 
+export default LineChartCard;

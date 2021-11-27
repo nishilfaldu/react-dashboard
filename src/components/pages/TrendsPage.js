@@ -1,5 +1,5 @@
 import React from 'react';
-// import TrendsDashboard from './TrendsDashboard';
+import TrendsDashboard from '../dashboards/TrendsDashboard';
 import styled from 'styled-components';
 import { useState } from 'react';
 import Tab from '../menus/Tab';
@@ -7,6 +7,7 @@ import LiveDashboard from '../dashboards/LiveDashboard';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import AnalyticsIcon from '@mui/icons-material/Analytics';
 import SchoolIcon from '@mui/icons-material/School';
+
 
 const StyledRow = styled.div`
     display: flex;
@@ -26,12 +27,7 @@ const TrendsPage = function(props){
 
     let toRender;
     if (data === 'participation'){
-        toRender = <LiveDashboard ethnicityVal='5'
-                                    countriesVal='5'
-                                    degreesVal='5'
-                                    majorsVal='5'
-                                    genderVal='5'
-                                    hackExperienceVal='5'></LiveDashboard>;
+        toRender = <TrendsDashboard></TrendsDashboard>
     }
     else if (data === 'demographics'){
         toRender = <LiveDashboard ethnicityVal='50'
