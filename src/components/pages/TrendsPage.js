@@ -25,7 +25,7 @@ const TrendsPage = function(props){
     const [data, setData] = useState('0');
 
     let toRender;
-    if (data === 'registered'){
+    if (data === 'participation'){
         toRender = <LiveDashboard ethnicityVal='5'
                                     countriesVal='5'
                                     degreesVal='5'
@@ -33,7 +33,7 @@ const TrendsPage = function(props){
                                     genderVal='5'
                                     hackExperienceVal='5'></LiveDashboard>;
     }
-    else if (data === 'confirmed'){
+    else if (data === 'demographics'){
         toRender = <LiveDashboard ethnicityVal='50'
                                 countriesVal='50'
                                 degreesVal='50'
@@ -41,7 +41,7 @@ const TrendsPage = function(props){
                                 genderVal='50'
                                 hackExperienceVal='50'></LiveDashboard>;
     }
-    else if (data === 'checkedin'){
+    else if (data === 'education'){
         toRender = <LiveDashboard ethnicityVal='500'
                                     countriesVal='500'
                                     degreesVal='500'
@@ -50,7 +50,7 @@ const TrendsPage = function(props){
                                     hackExperienceVal='500'></LiveDashboard>;
     }
     else {
-        toRender = <div style={{color: 'white'}}>WELCOME TO THE LIVE DASHBOARD!</div>
+        toRender = <div style={{color: 'white'}}>WELCOME TO THE TRENDS DASHBOARD!</div>
     }
 
     return(
@@ -59,7 +59,6 @@ const TrendsPage = function(props){
                 <Tab onClick={setData} tabButtonAttributes={tabButtonProps}></Tab>
             </StyledRow>
             {toRender}
-            {/* <TrendsDashboard></TrendsDashboard> */}
         </div>
     );
 }
