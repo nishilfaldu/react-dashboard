@@ -32,39 +32,55 @@ const LineChartCard = function(props){
                 data: [99, 123, 63, 94, 70, 44, 32, 94]
             }
         ],
-          chart: {
+        chart: {
             height: 350,
             type: 'line',
             zoom: {
               enabled: false
             },
-          },
-          dataLabels: {
+            toolbar: {
+                show: false
+            },
+            foreColor: '#ffffff',
+            fontFamily: 'Helvetica, Arial, sans-serif',
+            // fontSize: 'px',
+        },
+        dataLabels: {
             enabled: false
-          },
-          title: {
-            text: 'Page Statistics',
-            align: 'left'
-          },
-          legend: {
+        },
+        // title: {
+        //     text: 'Page Statistics',
+        //     align: 'left'
+        // },
+        legend: {
             tooltipHoverFormatter: function(val, opts) {
               return val + ' - ' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + ''
+            },
+            show: true,
+            position: 'bottom',
+            fontSize: '14px',
+            offsetY: 8,
+            labels: {
+                colors: [],
+            },
+            markers: {
+                width: 15,
+                height: 15,
+                // fillColors: [],
+                // borderRadius of marker
+                radius: 7,
+                size: 50,
+                shape: 'circle',
             }
-          },
-          markers: {
-            size: 0,
-            hover: {
-              sizeOffset: 6
-            }
-          },
-          xaxis: {
-            categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan', '06 Jan', '07 Jan', '08 Jan', '09 Jan',
-              '10 Jan', '11 Jan', '12 Jan'
-            ],
-          },
-        //   grid: {
-        //     borderColor: '#f1f1f1',
-        //   }  
+        },
+        xaxis: {
+            categories: ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021'],
+        },
+        grid: {
+            show: false,
+            borderColor: '#f1f1f1',
+        },  
+        
     });
 
     return(
@@ -75,7 +91,7 @@ const LineChartCard = function(props){
                     <br></br>
                     {props.cardValue}
                     <ChartDiv>
-                        <Chart options={options} series={options.series} height="auto" width="200%"/>
+                        <Chart options={options} series={options.series} height="200%" width="300%"/>
                     </ChartDiv>
                 </SimpleCard>
             </ThemeProvider>

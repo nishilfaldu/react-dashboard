@@ -12,8 +12,8 @@ export default {
   fontFamily: "Poppins",
 
   // Properties of a Card
-  cardHeight: "41rem",
-  cardWidth: "40rem",
+  cardHeight: "35rem",
+  cardWidth: "80rem",
   borderRadius: "1rem",
   colorCardBackground: "#1B1B1B",
 
