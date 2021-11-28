@@ -30,20 +30,10 @@ const TrendsPage = function(props){
         toRender = <TrendsDashboard></TrendsDashboard>
     }
     else if (data === 'demographics'){
-        toRender = <LiveDashboard ethnicityVal='50'
-                                countriesVal='50'
-                                degreesVal='50'
-                                majorsVal='50'
-                                genderVal='50'
-                                hackExperienceVal='50'></LiveDashboard>;
+        toRender = <div style={{color: 'white'}}>DEMOGRAPHICS</div>
     }
     else if (data === 'education'){
-        toRender = <LiveDashboard ethnicityVal='500'
-                                    countriesVal='500'
-                                    degreesVal='500'
-                                    majorsVal='500'
-                                    genderVal='500'
-                                    hackExperienceVal='500'></LiveDashboard>;
+        toRender = <div style={{color: 'white'}}>EDUCATION</div>
     }
     else {
         toRender = <div style={{color: 'white'}}>WELCOME TO THE TRENDS DASHBOARD!</div>
