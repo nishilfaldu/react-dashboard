@@ -32,48 +32,40 @@ const LineChartCard = function(props){
                 data: [99, 123, 63, 94, 70, 44, 32, 94]
             }
         ],
-        options: {
-            chart: {
-                height: 350,
-                type: 'line',
-                zoom: {
-                    enabled: false
-                },
-                dataLabels: {
-                    enabled: false
-                },
-                stroke: {
-                    width: [5, 7, 5],
-                    curve: 'straight',
-                },
-                title: {
-                    text: 'RevolutionUC Statistics',
-                    align: 'left'
-                },
-                legend: {
-                    tooltipHoverFormatter: function(val, opts) {
-                      return val + ' - ' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + ''
-                    }
-                },
-                markers: {
-                    size: 0,
-                    hover: {
-                      sizeOffset: 6
-                    }
-                },
-                grid: {
-                    row: {
-                      colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
-                      opacity: 0.5
-                    },
-                },
-                xaxis: {
-                    categories: ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021'],
-                  }
-                },
+          chart: {
+            height: 350,
+            type: 'line',
+            zoom: {
+              enabled: false
+            },
+          },
+          dataLabels: {
+            enabled: false
+          },
+          title: {
+            text: 'Page Statistics',
+            align: 'left'
+          },
+          legend: {
+            tooltipHoverFormatter: function(val, opts) {
+              return val + ' - ' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + ''
             }
-        }
-    );
+          },
+          markers: {
+            size: 0,
+            hover: {
+              sizeOffset: 6
+            }
+          },
+          xaxis: {
+            categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan', '06 Jan', '07 Jan', '08 Jan', '09 Jan',
+              '10 Jan', '11 Jan', '12 Jan'
+            ],
+          },
+        //   grid: {
+        //     borderColor: '#f1f1f1',
+        //   }  
+    });
 
     return(
         <div>
@@ -83,7 +75,7 @@ const LineChartCard = function(props){
                     <br></br>
                     {props.cardValue}
                     <ChartDiv>
-                        <Chart options={options} series={options.series} type="line" height="auto" width="100%"/>
+                        <Chart options={options} series={options.series} height="auto" width="200%"/>
                     </ChartDiv>
                 </SimpleCard>
             </ThemeProvider>
