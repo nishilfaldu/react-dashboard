@@ -7,7 +7,8 @@ import LiveDashboard from '../dashboards/LiveDashboard';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import AnalyticsIcon from '@mui/icons-material/Analytics';
 import SchoolIcon from '@mui/icons-material/School';
-
+import Carousel from '../carousel/Carousel';
+import CarouselItem from '../carousel/CarouselItem';
 
 const StyledRow = styled.div`
     display: flex;
@@ -30,7 +31,11 @@ const TrendsPage = function(props){
         toRender = <TrendsDashboard></TrendsDashboard>
     }
     else if (data === 'demographics'){
-        toRender = <div style={{color: 'white'}}>DEMOGRAPHICS</div>
+        toRender = <Carousel>
+            <CarouselItem>Item 1</CarouselItem>
+            <CarouselItem>Item 2</CarouselItem>
+            <CarouselItem>Item 3</CarouselItem>
+        </Carousel>
     }
     else if (data === 'education'){
         toRender = <div style={{color: 'white'}}>EDUCATION</div>
