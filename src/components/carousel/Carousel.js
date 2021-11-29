@@ -24,6 +24,18 @@ const Carousel = function({ children }){
                     return React.cloneElement(child, { width: "100%" });
                 })}
             </div>
+
+            <div>
+                {React.Children.map(children, (child, index) => {
+                    return(
+                        <button 
+                        onClick={() => {
+                            updateIndex(index)
+                        }}
+                        >{index + 1}</button>
+                    );
+                })}
+            </div>
         </div>
     );
 }
