@@ -32,7 +32,7 @@ const Carousel = function({ children }){
                         onClick={() => {
                             updateIndex(index);
                         }}
-                        >{index + 1}</button>
+                        >{index+1}</button>
                     );
                 })}
             </div>
