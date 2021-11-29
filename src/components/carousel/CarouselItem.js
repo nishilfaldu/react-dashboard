@@ -1,8 +1,10 @@
 import React from 'react';
 
-const CarouselItem = function(){
+const CarouselItem = function({ children, width }){
     return(
-        <div></div>
+        <div style = {{ width: width }}>
+            {children}
+        </div>
     );
 }
 
