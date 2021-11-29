@@ -6,6 +6,17 @@ const Carousel = function({ children }){
 
     const [activeIndex, setActiveIndex] = useState(0);
 
+    const updateIndex = function(newIndex){
+        if (newIndex < 0){
+            newIndex = 0;
+        }
+        else if (newIndex >= React.Children.Count(children)){
+            newIndex = React.Children.Count(children) - 1
+        }
+
+        setActiveIndex(newIndex);
+    };
+
     return(
         <div className="carousel">
             <div className="inner" style={{ transform: `translateX(-${activeIndex*100})` }}>
