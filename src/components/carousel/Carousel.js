@@ -10,8 +10,8 @@ const Carousel = function({ children }){
         if (newIndex < 0){
             newIndex = 0;
         }
-        else if (newIndex >= React.Children.Count(children)){
-            newIndex = React.Children.Count(children) - 1
+        else if (newIndex >= React.Children.count(children)){
+            newIndex = React.Children.count(children) - 1;
         }
 
         setActiveIndex(newIndex);
@@ -19,18 +19,18 @@ const Carousel = function({ children }){
 
     return(
         <div className="carousel">
-            <div className="inner" style={{ transform: `translateX(-${activeIndex*100})` }}>
+            <div className="inner" style={{ transform: `translateX(-${activeIndex*100}%)` }}>
                 {React.Children.map(children, (child, index) => {
                     return React.cloneElement(child, { width: "100%" });
                 })}
             </div>
 
-            <div>
+            <div className='indicators'>
                 {React.Children.map(children, (child, index) => {
                     return(
                         <button 
                         onClick={() => {
-                            updateIndex(index)
+                            updateIndex(index);
                         }}
                         >{index + 1}</button>
                     );
