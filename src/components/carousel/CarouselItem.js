@@ -1,8 +1,9 @@
 import React from 'react';
+import '../../assets/css/CarouselItem.css';
 
 const CarouselItem = function({ children, width }){
     return(
-        <div style = {{ width: width, color: 'white' }}>
+        <div className='carousel-item' style = {{ width: width }}>
             {children}
         </div>
     );
