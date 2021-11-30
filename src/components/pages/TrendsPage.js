@@ -3,7 +3,6 @@ import TrendsDashboard from '../dashboards/TrendsDashboard';
 import styled from 'styled-components';
 import { useState } from 'react';
 import Tab from '../menus/Tab';
-import LiveDashboard from '../dashboards/LiveDashboard';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import AnalyticsIcon from '@mui/icons-material/Analytics';
 import SchoolIcon from '@mui/icons-material/School';
