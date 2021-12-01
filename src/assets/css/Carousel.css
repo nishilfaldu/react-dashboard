@@ -12,8 +12,9 @@
     justify-content: center;
 }
 
-.indicators > button {
-    margin: 5px;
+.indicators > img {
+    margin-top: 2rem;
+    /* margin-bottom: 5px; */
 }
 
 img {

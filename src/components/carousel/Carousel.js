@@ -21,7 +21,7 @@ const Carousel = function({ children }){
         <div className="carousel">
             <div className="inner" style={{ transform: `translateX(-${activeIndex*100}%)` }}>
                 {React.Children.map(children, (child, index) => {
-                    return React.cloneElement(child, { width: "100%" });
+                    return React.cloneElement(child, { width: "100%", height: "100%" });
                 })}
             </div>
 
