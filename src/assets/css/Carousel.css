@@ -4,22 +4,19 @@
 
 .inner {
     white-space: nowrap;
-    transition: transform 0.3s;
+    transition: transform 0.9s;
 }
 
 .indicators {
     display: flex;
-    justify-content: center;
-}
-
-.indicators > img {
-    margin-top: 2rem;
-    /* margin-bottom: 5px; */
+    justify-content: space-evenly;
 }
 
 img {
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
-    border: 4px solid #1d1e22;
+    border: 4px solid #867c48;
+    margin-top: 2rem;
+    cursor: pointer;
 }

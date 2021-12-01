@@ -10,6 +10,7 @@ import Carousel from '../carousel/Carousel';
 import CarouselItem from '../carousel/CarouselItem';
 import PieChartCard from '../cards/charts/PieChartCard';
 import BarChartCard from '../cards/charts/BarChartCard';
+import YearlyDashboard from '../dashboards/YearlyDashboard';
 
 const StyledRow = styled.div`
     display: flex;
@@ -34,7 +35,7 @@ const TrendsPage = function(props){
     else if (data === 'demographics'){
         toRender = <Carousel>
             <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2014.png' alt='revuc-spring-2014'>
-                <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue="250" chartType={'pie'}></PieChartCard>
+                <YearlyDashboard></YearlyDashboard>
             </CarouselItem>
             <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-fall-2014.png' alt='revuc-fall-2014'>
                 <BarChartCard cardTitle="Registrants" cardLabel="Today" cardValue="250"></BarChartCard>
