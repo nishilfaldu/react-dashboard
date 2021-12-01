@@ -28,10 +28,15 @@ const Carousel = function({ children }){
             <div className='indicators'>
                 {React.Children.map(children, (child, index) => {
                     return(
-                            <img onClick={() => {
-                                    updateIndex(index);
-                                }} 
-                            src={child.props.src} alt={child.props.alt}></img>
+                        // <button 
+                        // onClick={() => {
+                        //     updateIndex(index);
+                        // }}
+                        // style={{backgroundImage:'url(/src/assets/images/revuc-fall-2014.png)', width:'100rem', height:'10rem'}}></button>
+                        <img onClick={() => {
+                                updateIndex(index);
+                            }} 
+                        src={child.props.src} alt={child.props.alt}></img>
                     );
                 })}
             </div>
