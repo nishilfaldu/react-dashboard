@@ -33,14 +33,14 @@ const TrendsPage = function(props){
         toRender = <Carousel>
             <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2014.png' alt='revuc-spring-2014'>Item 1</CarouselItem>
             <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-fall-2014.png' alt='revuc-fall-2014'>Item 2</CarouselItem>
-            <CarouselItem>Item 3</CarouselItem>
-            <CarouselItem>Item 4</CarouselItem>
-            <CarouselItem>Item 5</CarouselItem>
-            <CarouselItem>Item 6</CarouselItem>
-            <CarouselItem>Item 7</CarouselItem>
-            <CarouselItem>Item 8</CarouselItem>
-            <CarouselItem>Item 9</CarouselItem>
-            <CarouselItem>Item 10</CarouselItem>
+            <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2015.png' alt='revuc-spring-2015'>Item 3</CarouselItem>
+            <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2016.png' alt='revuc-spring-2016'>Item 4</CarouselItem>
+            <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-fall-2016.png' alt='revuc-fall-2016'>Item 5</CarouselItem>
+            <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2017.png' alt='revuc-spring-2017'>Item 6</CarouselItem>
+            <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2018.png' alt='revuc-spring-2018'>Item 7</CarouselItem>
+            <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2019.png' alt='revuc-spring-2019'>Item 8</CarouselItem>
+            <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2020.png' alt='revuc-spring-2020'>Item 9</CarouselItem>
+            <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2021.png' alt='revuc-spring-2021'>Item 10</CarouselItem>
         </Carousel>
     }
     else if (data === 'education'){
