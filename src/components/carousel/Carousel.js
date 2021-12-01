@@ -36,7 +36,7 @@ const Carousel = function({ children }){
                         <img onClick={() => {
                                 updateIndex(index);
                             }} 
-                        src={child.props.src} alt={child.props.alt} style={{width:'10rem', height:'10rem'}}></img>
+                        src={child.props.src} alt={child.props.alt}></img>
                     );
                 })}
             </div>
