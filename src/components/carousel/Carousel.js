@@ -32,7 +32,7 @@ const Carousel = function({ children }){
                         onClick={() => {
                             updateIndex(index);
                         }}
-                        >{index+1}</button>
+                        ><span><img src='../../assets/images/revuv-fall-2014.png'></img></span></button>
                     );
                 })}
             </div>
