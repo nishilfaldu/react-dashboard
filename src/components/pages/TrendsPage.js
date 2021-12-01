@@ -31,8 +31,8 @@ const TrendsPage = function(props){
     }
     else if (data === 'demographics'){
         toRender = <Carousel>
-            <CarouselItem>Item 1</CarouselItem>
-            <CarouselItem>Item 2</CarouselItem>
+            <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2014.png' alt='revuc-spring-2014'>Item 1</CarouselItem>
+            <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-fall-2014.png' alt='revuc-fall-2014'>Item 2</CarouselItem>
             <CarouselItem>Item 3</CarouselItem>
             <CarouselItem>Item 4</CarouselItem>
             <CarouselItem>Item 5</CarouselItem>
