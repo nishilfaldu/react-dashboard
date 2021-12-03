@@ -19,7 +19,8 @@ const BarChartCard = function(props){
         show: false,
       },
       animations: {
-        enabled: false,
+        enabled: true,
+        speed: 1000,
       },
       stacked: true,
       zoom: { enabled: false },
@@ -41,10 +42,20 @@ const BarChartCard = function(props){
         barHeight: "50%",
       },
     },
-    tooltip: { enabled: false },
+    tooltip: { enabled: true,
+      x : {
+        show: true,
+      },
+      theme: 'dark',
+      y: {
+        formatter: function (val) {
+          return val + " hackers"
+        }
+      } },
     legend: { show: false },
     dataLabels: { enabled: false },
     xaxis: {
+      categories: ['<18','18','19','20','21','22','23','23+'],
       floating: true,
       labels: {
         show: false,
@@ -58,6 +69,7 @@ const BarChartCard = function(props){
       },
       maxHeight: 0,
     },
+    // colors: ['#5B9EF5', '#'],
     yaxis: {
       floating: true,
       offsetX: -20,
@@ -74,13 +86,13 @@ const BarChartCard = function(props){
   });
 
   const series = [
+      // {
+      //   name: "series1",
+      //   data: [10, 35, 40, 45, 40, 35, 10],
+      // },
       {
-        name: "series1",
-        data: [10, 35, 40, 45, 40, 35, 10],
-      },
-      {
-        name: "series2",
-        data: [30, 45, 35, 10, 64, 10, 10],
+        name: "Count",
+        data: [30, 100, 35, 110, 40, 56, 100, 65],
       },
     ];
 
