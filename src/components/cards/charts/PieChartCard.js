@@ -21,7 +21,7 @@ const PieChartCard = function(props){
             enabled: true,
             // style for text on graph
             style: {
-                fontSize: '15px',
+                fontSize: '0px',
                 fontFamily: 'Helvetica, Arial, sans-serif',
                 fontWeight: '0',
                 // colors: undefined
