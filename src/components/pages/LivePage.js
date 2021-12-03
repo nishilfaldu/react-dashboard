@@ -25,28 +25,13 @@ const LivePage = function(props){
 
     let toRender;
     if (data === 'registered'){
-        toRender = <LiveDashboard ethnicityVal='5'
-                                    countriesVal='5'
-                                    degreesVal='5'
-                                    majorsVal='5'
-                                    genderVal='5'
-                                    hackExperienceVal='5'></LiveDashboard>;
+        toRender = <LiveDashboard cardValue='50'></LiveDashboard>;
     }
     else if (data === 'confirmed'){
-        toRender = <LiveDashboard ethnicityVal='50'
-                                countriesVal='50'
-                                degreesVal='50'
-                                majorsVal='50'
-                                genderVal='50'
-                                hackExperienceVal='50'></LiveDashboard>;
+        toRender = <LiveDashboard cardValue='500'></LiveDashboard>;
     }
     else if (data === 'checkedin'){
-        toRender = <LiveDashboard ethnicityVal='500'
-                                    countriesVal='500'
-                                    degreesVal='500'
-                                    majorsVal='500'
-                                    genderVal='500'
-                                    hackExperienceVal='500'></LiveDashboard>;
+        toRender = <LiveDashboard cardValue='5000'></LiveDashboard>;
     }
     else {
         toRender = <div style={{color: 'white'}}>WELCOME TO THE LIVE DASHBOARD!</div>

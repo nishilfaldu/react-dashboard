@@ -1,7 +1,13 @@
-import styled from 'styled-components';
-import PieChartCard from '../cards/charts/PieChartCard';
 import BarChartCard from '../cards/charts/BarChartCard';
-import { useState } from 'react';
+import PieChartCard from '../cards/charts/PieChartCard';
+import IconFigureCard from '../cards/figures/IconFigureCard';
+import BadgeFigureCard from '../cards/figures/BadgeFigureCard';
+import SchoolIcon from '@mui/icons-material/School';
+import FemaleIcon from '@mui/icons-material/Female';
+import LanguageIcon from '@mui/icons-material/Language';
+import PublicIcon from '@mui/icons-material/Public';
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
+import styled from 'styled-components';
 
 const StyledRow = styled.div`
     display: flex;
@@ -13,17 +19,45 @@ const LiveDashboard = function(props){
     return(
         <div>
             <StyledRow>
-                <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue={props.ethnicityVal} chartType={'pie'}></PieChartCard>
-                <BarChartCard cardTitle="Countries" cardLabel="Count" cardValue={props.countriesVal}></BarChartCard>
-                <PieChartCard cardTitle="Education Levels" cardLabel="Degrees" cardValue={props.degreesVal} chartType={'pie'}></PieChartCard>
+                <IconFigureCard cardTitle="Schools" cardValue={props.cardValue} Icon={
+                                            <SchoolIcon sx={{ fontSize: 60, color: 'white' }}/>
+                                            }> 
+                </IconFigureCard>
+                <IconFigureCard cardTitle="Females" cardValue="200" Icon={
+                                        <FemaleIcon sx={{ fontSize: 60, color: 'white' }}/>
+                                        }> 
+                </IconFigureCard>
+                <IconFigureCard cardTitle="States" cardValue="50" Icon={
+                                        <LanguageIcon sx={{ fontSize: 60, color: 'white' }}/>
+                                        }> 
+                </IconFigureCard>
+                <IconFigureCard cardTitle="Cities" cardValue="50" Icon={
+                                        <LanguageIcon sx={{ fontSize: 60, color: 'white' }}/>
+                                        }> 
+                </IconFigureCard>
             </StyledRow>
 
             <StyledRow>
-                <BarChartCard cardTitle="Majors" cardLabel="Count" cardValue={props.majorsVal}></BarChartCard>
-                <PieChartCard cardTitle="Gender" cardLabel="Female" cardValue={props.genderVal} chartType={'donut'}></PieChartCard>
-                <BarChartCard cardTitle="Hackathon Experience" cardLabel="Count" cardValue={props.hackExperienceVal}></BarChartCard>
+                <IconFigureCard cardTitle="Countries" cardValue="50" Icon={
+                                            <PublicIcon sx={{ fontSize: 60, color: 'white' }}/>
+                                            }> 
+                </IconFigureCard>
+                <IconFigureCard cardTitle="Lattice" cardValue="200" Icon={
+                                        <PeopleAltIcon sx={{ fontSize: 60, color: 'white' }}/>
+                                        }> 
+                </IconFigureCard>
+                <BadgeFigureCard LabelOne="Registrants"
+                                ValueOne="500"
+                                LabelTwo="Participants"
+                                ValueTwo="500">
+                </BadgeFigureCard>
             </StyledRow>
-            {/* <SparklineCard></SparklineCard> */}
+
+            <StyledRow>
+                <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue="250" chartType={'pie'}></PieChartCard>
+                <BarChartCard cardTitle="Registrants" cardLabel="Today" cardValue="250"></BarChartCard>
+                <PieChartCard cardTitle="Education" cardLabel="Degrees" cardValue="250" chartType={'pie'}></PieChartCard>
+            </StyledRow>
         </div>
     );
 }
