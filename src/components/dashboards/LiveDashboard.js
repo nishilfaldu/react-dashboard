@@ -55,9 +55,10 @@ const LiveDashboard = function(props){
             </StyledRow>
 
             <StyledRow>
-                <PieChartCard cardTitle="Gender" cardLabel="Count" cardValue="250" chartType={'donut'}></PieChartCard>
+                {/* <PieChartCard cardTitle="Gender" cardLabel="Count" cardValue="250" chartType={'donut'}></PieChartCard> */}
                 <BarChartCard cardTitle="Registrants" cardLabel="Today" cardValue="250"></BarChartCard>
                 <PieChartCard cardTitle="Education" cardLabel="Majors" cardValue="250" chartType={'pie'}></PieChartCard>
+                <BarChartCard cardTitle="Hackathon Experience" cardLabel="Count" cardValue="250"></BarChartCard>
             </StyledRow>
         </div>
     );
