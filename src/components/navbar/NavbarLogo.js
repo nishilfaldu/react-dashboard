@@ -57,7 +57,7 @@ const NavbarLogo = function(props){
             {/* <StyledLink to='/'> */}
             <StyledDiv>
                 <StyledSvgBackground>
-                    <img src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2014.png' alt='revuc-spring-2014'></img>
+                    <img src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2014.png' alt='revuc-spring-2014' style={{ width: '8rem', height: '8rem' }}/>
                 </StyledSvgBackground>
             </StyledDiv>
             {/* </StyledLink> */}

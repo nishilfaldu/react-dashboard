@@ -12,7 +12,7 @@
     justify-content: space-evenly;
 }
 
-div > img {
+.logo {
     width: 4rem;
     height: 4rem;
     border-radius: 50%;

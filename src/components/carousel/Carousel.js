@@ -33,7 +33,7 @@ const Carousel = function({ children }){
                         //     updateIndex(index);
                         // }}
                         // style={{backgroundImage:'url(/src/assets/images/revuc-fall-2014.png)', width:'100rem', height:'10rem'}}></button>
-                        <img onClick={() => {
+                        <img className='logo' onClick={() => {
                                 updateIndex(index);
                             }} 
                         src={child.props.src} alt={child.props.alt}></img>
