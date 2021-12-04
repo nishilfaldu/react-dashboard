@@ -14,6 +14,7 @@ const StyledRow = styled.div`
     display: flex;
     justify-content: space-evenly;
     padding-bottom: 1.3rem;
+    padding-left: 15rem;
 `
 
 const LivePage = function(props){
