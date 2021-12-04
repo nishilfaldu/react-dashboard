@@ -46,7 +46,7 @@ const LivePage = function(props){
             <NavbarNav/> */}
             <Navbar/>
             <StyledRow>
-                <Tab onClick={setData} tabButtonAttributes={tabButtonProps}></Tab>
+                {/* <Tab onClick={setData} tabButtonAttributes={tabButtonProps}></Tab> */}
             </StyledRow>
             {toRender}
         </div>

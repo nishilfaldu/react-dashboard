@@ -13,7 +13,8 @@ import TrendsPage from '../pages/TrendsPage';
 
 const StyledRow = styled.div`
     position: absolute;
-    top: 15rem;
+    top: 16rem;
+    left: 2rem;
     z-index: 3;
     display: flex;
     flex-direction: column;
