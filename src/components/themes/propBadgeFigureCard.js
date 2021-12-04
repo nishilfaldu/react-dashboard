@@ -13,7 +13,7 @@ export default {
 
     // Properties of a Card
     cardHeight: "7rem",
-    cardWidth: "42rem",
+    cardWidth: "35rem",
     cardBorderRadius: "1rem",
     colorCardBackground: "#1B1B1B",
 

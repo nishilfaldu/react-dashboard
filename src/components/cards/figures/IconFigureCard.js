@@ -40,7 +40,7 @@ const IconFigureCard = function(props){
             <ThemeProvider theme={theme}>
                 <IconCard>
                 <Div>
-                    <div style={{paddingRight: '5rem'}}>    
+                    <div style={{paddingRight: '2rem'}}>    
                         <Label>{props.cardTitle}</Label>
                         <Value>{props.cardValue}</Value>
                     </div>
