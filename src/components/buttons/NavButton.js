@@ -18,12 +18,10 @@ const StyledButton = styled.button`
     cursor: ${(p) => p.theme.buttonCursorProperty};
 `
 
-
-
 const NavButton = function(props){
 
     const handleClick = function(){
-        props.func(props.label);
+        props.setData(props.label);
     };
 
     return(

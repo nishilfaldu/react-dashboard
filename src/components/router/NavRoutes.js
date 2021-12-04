@@ -34,9 +34,9 @@ const NavRoutes = function(){
         <div>
             <Router>
                 <StyledRow>
-                    <Link to="/" style={{ textDecoration: 'none' }}><NavButton label="Live" checked={activeLink === 'Live' ? true : false} func={setActiveLink}></NavButton></Link>
-                    <Link to="/yearly" style={{ textDecoration: 'none' }}><NavButton label="Yearly" checked={activeLink === 'Yearly' ? true : false} func={setActiveLink}></NavButton></Link>
-                    <Link to="/trends" style={{ textDecoration: 'none' }}><NavButton label="Trends" checked={activeLink === 'Trends' ? true : false} func={setActiveLink}></NavButton></Link>
+                    <Link to="/" style={{ textDecoration: 'none' }}><NavButton label="Live" checked={activeLink === 'Live' ? true : false} setData={setActiveLink}></NavButton></Link>
+                    <Link to="/yearly" style={{ textDecoration: 'none' }}><NavButton label="Yearly" checked={activeLink === 'Yearly' ? true : false} setData={setActiveLink}></NavButton></Link>
+                    <Link to="/trends" style={{ textDecoration: 'none' }}><NavButton label="Trends" checked={activeLink === 'Trends' ? true : false} setData={setActiveLink}></NavButton></Link>
                 </StyledRow>
 
                 <Switch>
