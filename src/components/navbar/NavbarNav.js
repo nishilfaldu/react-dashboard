@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from "styled-components";
-import { rgba } from "polished";
+import { rgb } from "polished";
 
 const StyledWrapper = styled.div`
     flex: 0 1 auto;
@@ -11,12 +11,15 @@ const StyledWrapper = styled.div`
 `
 
 const StyledSectionLabel = styled.div`
-    // display: flex;
-    z-index: 3;
-    color: rgba("white", 0.57);
+    display: flex;
+    position: absolute;
+    right: 5;
+    color: white;
+    font-size: 1.2rem;
+    padding-top: 2rem;
 `
 
-const NavMenu = function(props){
+const NavbarNav = function(props){
 
     return(
         <div>
@@ -25,4 +28,4 @@ const NavMenu = function(props){
     );
 };  
 
-export default NavMenu;
+export default NavbarNav;

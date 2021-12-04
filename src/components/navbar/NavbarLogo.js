@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { rgba } from "polished";
+import NavbarNav from './NavbarNav';
 
 const StyledWrapper = styled.div`
     display: flex;
@@ -59,7 +60,9 @@ const NavbarLogo = function(props){
                 <StyledSvgBackground>
                     <img src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2014.png' alt='revuc-spring-2014' style={{ width: '8rem', height: '8rem' }}/>
                 </StyledSvgBackground>
+                <NavbarNav></NavbarNav>
             </StyledDiv>
+
             {/* </StyledLink> */}
         </StyledWrapper>
     );
