@@ -5,6 +5,8 @@ function App() {
   return (
     <div className="App">
       <NavRoutes></NavRoutes>
+      {/* <NavbarLogo></NavbarLogo> */}
+      {/* hello world! */}
     </div>
     
   );

@@ -12,7 +12,11 @@ import YearlyPage from '../pages/YearlyPage';
 import TrendsPage from '../pages/TrendsPage';
 
 const StyledRow = styled.div`
+    position: absolute;
+    top: 15rem;
+    z-index: 3;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
     padding-bottom: 1rem;

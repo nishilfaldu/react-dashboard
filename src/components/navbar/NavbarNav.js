@@ -1,6 +1,10 @@
 import React from 'react';
 import styled, { css } from "styled-components";
-import { rgb } from "polished";
+// import { rgba } from "polished";
+// import NavRoutes from '../router/NavRoutes';
+import NavRoutes from '../router/NavRoutes';
+import NavButton from '../buttons/NavButton';
+
 
 const StyledWrapper = styled.div`
     flex: 0 1 auto;
@@ -13,7 +17,7 @@ const StyledWrapper = styled.div`
 const StyledSectionLabel = styled.div`
     display: flex;
     position: absolute;
-    right: 5;
+    top: 5;
     color: white;
     font-size: 1.2rem;
     padding-top: 2rem;
@@ -24,6 +28,7 @@ const NavbarNav = function(props){
     return(
         <div>
             <StyledSectionLabel>Dashboards</StyledSectionLabel>
+            {/* <NavRoutes></NavRoutes> */}
         </div>
     );
 };  
