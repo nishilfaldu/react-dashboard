@@ -12,6 +12,7 @@ import PieChartCard from '../cards/charts/PieChartCard';
 import BarChartCard from '../cards/charts/BarChartCard';
 import YearlyDashboard from '../dashboards/YearlyDashboard';
 import NavbarLogo from '../navbar/NavbarLogo';
+import Navbar from '../navbar/Navbar';
 
 const StyledRow = styled.div`
     display: flex;
@@ -77,6 +78,7 @@ const TrendsPage = function(props){
 
     return(
         <div>
+            <Navbar/>
             <StyledRow>
                 <Tab onClick={setData} tabButtonAttributes={tabButtonProps}></Tab>
             </StyledRow>
