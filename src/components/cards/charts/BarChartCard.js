@@ -13,6 +13,7 @@ const ChartDiv = styled.div`
 const BarChartCard = function(props){
 
   const [options, setOptions] = useState({
+    colors: ['#5B9EF5', '#7EE4AB', '#F5BF60', '#EE6E7B', '#8876D1', '#72838D', '#6CB1A9', '#C94BE5'],
     chart: {
       parentHeightOffset: 0,
       toolbar: {
@@ -69,7 +70,6 @@ const BarChartCard = function(props){
       },
       maxHeight: 0,
     },
-    // colors: ['#5B9EF5', '#'],
     yaxis: {
       floating: true,
       offsetX: -20,
