@@ -11,6 +11,7 @@ import CarouselItem from '../carousel/CarouselItem';
 import PieChartCard from '../cards/charts/PieChartCard';
 import BarChartCard from '../cards/charts/BarChartCard';
 import YearlyDashboard from '../dashboards/YearlyDashboard';
+import NavbarLogo from '../navbar/NavbarLogo';
 
 const StyledRow = styled.div`
     display: flex;
@@ -68,6 +69,7 @@ const TrendsPage = function(props){
     }
     else if (data === 'education'){
         toRender = <div style={{color: 'white'}}>EDUCATION</div>
+        // toRender = <NavbarLogo></NavbarLogo>
     }
     else {
         toRender = <div style={{color: 'white'}}>WELCOME TO THE TRENDS DASHBOARD!</div>
