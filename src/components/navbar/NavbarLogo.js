@@ -5,7 +5,6 @@ import { rgba } from "polished";
 import NavbarNav from './NavbarNav';
 
 const StyledWrapper = styled.div`
-    // display: ;
     position: absolute;
     z-index: 2;
     flex: 0 1 auto;

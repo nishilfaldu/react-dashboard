@@ -13,7 +13,7 @@ import Navbar from '../navbar/Navbar';
 const StyledRow = styled.div`
     display: flex;
     justify-content: space-evenly;
-    padding-bottom: 1rem;
+    padding-bottom: 1.3rem;
 `
 
 const LivePage = function(props){
@@ -46,7 +46,7 @@ const LivePage = function(props){
             <NavbarNav/> */}
             <Navbar/>
             <StyledRow>
-                {/* <Tab onClick={setData} tabButtonAttributes={tabButtonProps}></Tab> */}
+                <Tab onClick={setData} tabButtonAttributes={tabButtonProps}></Tab>
             </StyledRow>
             {toRender}
         </div>

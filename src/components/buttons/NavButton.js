@@ -12,7 +12,6 @@ const StyledButton = styled.button`
     border-radius: ${(p) => p.theme.borderRadius};
     font-size: ${(p) => p.theme.buttonLabelFontSize};
     color: ${(p) => p.theme.colorTitle};
-    // background: ${(p) => p.theme.colorButtonBackground};
     background: ${(p) => p.active ? `#867c48` : p.theme.colorButtonBackground};
     border: ${(p) => p.theme.buttonBorder};
     cursor: ${(p) => p.theme.buttonCursorProperty};
