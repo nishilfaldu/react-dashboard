@@ -1,13 +1,13 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-    numParticipants: 500,
-    numRegistrants: 500,
-    numSchools: 50,
-    numStates: 50,
-    numCountries: 55,
-    numUsersLattice: 555,
-    numFemales: 400,
-    numUsersDiscord: 800,
+    numParticipants: 600,
+    numRegistrants: 600,
+    numSchools: 60,
+    numStates: 60,
+    numCountries: 65,
+    numUsersLattice: 666,
+    numFemales: 500,
+    numUsersDiscord: 900,
 
     numMajors: 5,
     labelMajors: ['ME', 'EE', 'CS', 'CE', 'BME'],
