@@ -7,6 +7,7 @@ import CheckIcon from '@mui/icons-material/Check';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 import NavbarLogo from '../navbar/NavbarLogo';
+import NavbarNav from '../navbar/NavbarNav';
 
 const StyledRow = styled.div`
     display: flex;
@@ -41,6 +42,7 @@ const LivePage = function(props){
     return(
         <div>
             <NavbarLogo/>
+            <NavbarNav/>
             <StyledRow>
                 <Tab onClick={setData} tabButtonAttributes={tabButtonProps}></Tab>
             </StyledRow>

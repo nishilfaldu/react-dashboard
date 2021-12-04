@@ -32,7 +32,7 @@ const StyledLink = styled(Link)`
     padding-top: 1.5rem;
 `
 
-const StyledDiv = styled(Link)`
+const StyledDiv = styled.div`
     width: 100%;
     padding-left: 1.5rem;
     padding-top: 1.5rem;
