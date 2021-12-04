@@ -13,7 +13,7 @@ const StyledButton = styled.button`
     font-size: ${(p) => p.theme.buttonLabelFontSize};
     color: ${(p) => p.theme.colorTitle};
     // background: ${(p) => p.theme.colorButtonBackground};
-    background: ${(p) => p.active ? `orange` : p.theme.colorButtonBackground};
+    background: ${(p) => p.active ? `#867c48` : p.theme.colorButtonBackground};
     border: ${(p) => p.theme.buttonBorder};
     cursor: ${(p) => p.theme.buttonCursorProperty};
 `
@@ -21,16 +21,15 @@ const StyledButton = styled.button`
 
 
 const NavButton = function(props){
-    const [active, setActive] = useState(false);
 
     const handleClick = function(){
-        setActive(true);
+        props.func(props.label);
     };
 
     return(
         <div>
             <ThemeProvider theme={theme}>
-                <StyledButton onClick={handleClick} active={active}>{props.label}</StyledButton>
+                <StyledButton onClick={handleClick} active={props.checked}>{props.label}</StyledButton>
             </ThemeProvider>
         </div>
     );
