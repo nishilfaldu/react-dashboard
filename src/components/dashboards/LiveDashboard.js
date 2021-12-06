@@ -57,9 +57,9 @@ const LiveDashboard = function(props){
 
             <StyledRow>
                 {/* <PieChartCard cardTitle="Gender" cardLabel="Count" cardValue="250" chartType={'donut'}></PieChartCard> */}
-                <BarChartCard cardTitle="Age" cardLabel="Current" cardValue="18+"></BarChartCard>
-                <PieChartCard cardTitle="Education" cardLabel="Majors" cardValue={props.data.numMajors} chartType={'pie'}></PieChartCard>
-                <BarChartCard cardTitle="Hackathon Experience" cardLabel="Count" cardValue={props.data.totalHackathons}></BarChartCard>
+                <BarChartCard cardTitle="Age" cardLabel="Current" cardValue="18+" labelData={props.data.labelAges} seriesData={props.data.seriesAge}></BarChartCard>
+                <PieChartCard cardTitle="Education" cardLabel="Majors" cardValue={props.data.numMajors} chartType={'pie'} labelData={props.data.labelMajors} seriesData={props.data.seriesMajors}></PieChartCard>
+                <BarChartCard cardTitle="Hackathon Experience" cardLabel="Count" cardValue={props.data.totalHackathons} labelData={props.data.labelHackExperience} seriesData={props.data.seriesHackExperience}></BarChartCard>
             </StyledRow>
         </div>
     );

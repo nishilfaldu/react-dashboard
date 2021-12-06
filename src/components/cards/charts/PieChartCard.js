@@ -15,7 +15,7 @@ const ChartDiv = styled.div`
 const PieChartCard = function(props){
 
     const [options, setOptions] = useState({
-        series: [20, 20, 20, 20, 20],
+        series: props.seriesData,
         colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#FF9800'],
         dataLabels: {
             enabled: true,
@@ -71,7 +71,7 @@ const PieChartCard = function(props){
             width: 380,
             type: 'pie',
         },
-        labels: ['EE', 'CS', 'CE', 'BME', 'ME'],
+        labels: props.labelData,
         responsive: [{
             breakpoint: 480,
         }]

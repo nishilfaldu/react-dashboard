@@ -56,7 +56,7 @@ const BarChartCard = function(props){
     legend: { show: false },
     dataLabels: { enabled: false },
     xaxis: {
-      categories: ['<18','18','19','20','21','22','23','23+'],
+      categories: props.labelData,
       floating: true,
       labels: {
         show: false,
@@ -92,7 +92,7 @@ const BarChartCard = function(props){
       // },
       {
         name: "Count",
-        data: [30, 100, 35, 110, 40, 56, 100, 65],
+        data: props.seriesData,
       },
     ];
 
