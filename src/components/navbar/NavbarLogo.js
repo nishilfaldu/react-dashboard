@@ -9,7 +9,6 @@ const StyledWrapper = styled.div`
     z-index: 2;
     flex: 0 1 auto;
     background: #1B1B1B;
-    // background: #867c48;
     box-shadow: 0 0 10px ${rgba("black", 0.2)};
     height: 100%;
     width: 15rem;
@@ -17,7 +16,6 @@ const StyledWrapper = styled.div`
 
 const StyledBackground = styled.div`
     display: flex;
-    // padding-top: 3rem;
     position: absolute;
     z-index: 0;
     left: 0;
@@ -54,19 +52,14 @@ const StyledSvgBackground = styled.div`
 const NavbarLogo = function(props){
     return(
         <StyledWrapper>
-        {/* // <div> */}
             <StyledBackground/>
-            {/* <StyledLink to='/'> */}
             <StyledDiv>
                 <StyledSvgBackground>
-                    <img src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2014.png' alt='revuc-spring-2014' style={{ width: '8rem', height: '8rem' }}/>
+                    <img src='https://assets.revolutionuc.com/logo-256.png' alt='revuc-spring-2021' style={{ width: '8rem', height: '8rem' }}/>
                 </StyledSvgBackground>
 
                 <NavbarNav></NavbarNav>
             </StyledDiv>
-
-            {/* </StyledLink> */}
-            {/* </div>  */}
         </StyledWrapper>
     );
 }

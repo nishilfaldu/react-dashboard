@@ -6,9 +6,10 @@ import { useState } from 'react';
 import CheckIcon from '@mui/icons-material/Check';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
-import NavbarLogo from '../navbar/NavbarLogo';
-import NavbarNav from '../navbar/NavbarNav';
 import Navbar from '../navbar/Navbar';
+import registeredData from '../../assets/data/live/registered';
+import confirmedData from '../../assets/data/live/confirmed';
+import checkedinData from '../../assets/data/live/checkedin';
 
 const StyledRow = styled.div`
     display: flex;
@@ -29,13 +30,13 @@ const LivePage = function(props){
 
     let toRender;
     if (data === 'registered'){
-        toRender = <LiveDashboard cardValue='50'></LiveDashboard>;
+        toRender = <LiveDashboard registeredData={registeredData}></LiveDashboard>;
     }
     else if (data === 'confirmed'){
-        toRender = <LiveDashboard cardValue='500'></LiveDashboard>;
+        toRender = <LiveDashboard confirmedData={confirmedData} ></LiveDashboard>;
     }
     else if (data === 'checkedin'){
-        toRender = <LiveDashboard cardValue='5000'></LiveDashboard>;
+        toRender = <LiveDashboard checkedinData={checkedinData}></LiveDashboard>;
     }
     else {
         toRender = <div style={{color: 'white'}}>WELCOME TO THE LIVE DASHBOARD!</div>

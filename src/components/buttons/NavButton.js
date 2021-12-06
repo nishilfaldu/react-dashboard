@@ -1,7 +1,6 @@
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import theme from "../themes/propNavButton";
-import { useState } from 'react';
 
 const StyledButton = styled.button`
     display: flex;
