@@ -30,13 +30,13 @@ const LivePage = function(props){
 
     let toRender;
     if (data === 'registered'){
-        toRender = <LiveDashboard registeredData={registeredData}></LiveDashboard>;
+        toRender = <LiveDashboard data={registeredData}></LiveDashboard>;
     }
     else if (data === 'confirmed'){
-        toRender = <LiveDashboard confirmedData={confirmedData} ></LiveDashboard>;
+        toRender = <LiveDashboard data={confirmedData} ></LiveDashboard>;
     }
     else if (data === 'checkedin'){
-        toRender = <LiveDashboard checkedinData={checkedinData}></LiveDashboard>;
+        toRender = <LiveDashboard data={checkedinData}></LiveDashboard>;
     }
     else {
         toRender = <div style={{color: 'white'}}>WELCOME TO THE LIVE DASHBOARD!</div>

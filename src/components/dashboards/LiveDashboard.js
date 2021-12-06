@@ -22,34 +22,34 @@ const LiveDashboard = function(props){
         <div>
             <StyledRow>
                 <BadgeFigureCard LabelOne="Registrants"
-                                ValueOne="500"
+                                ValueOne={props.data.numRegistrants}
                                 LabelTwo="Participants"
-                                ValueTwo="500">
+                                ValueTwo={props.data.numParticipants}>
                 </BadgeFigureCard>
-                <IconFigureCard cardTitle="Schools" cardValue={props.cardValue} Icon={
+                <IconFigureCard cardTitle="Schools" cardValue={props.data.numSchools} Icon={
                                             <SchoolIcon sx={{ fontSize: 60, color: 'white' }}/>
                                             }> 
                 </IconFigureCard>
-                <IconFigureCard cardTitle="States" cardValue="50" Icon={
+                <IconFigureCard cardTitle="States" cardValue={props.data.numStates} Icon={
                                         <LanguageIcon sx={{ fontSize: 60, color: 'white' }}/>
                                         }> 
                 </IconFigureCard>
             </StyledRow>
 
             <StyledRow>
-                <IconFigureCard cardTitle="Countries" cardValue="50" Icon={
+                <IconFigureCard cardTitle="Countries" cardValue={props.data.numCountries} Icon={
                                             <PublicIcon sx={{ fontSize: 60, color: 'white' }}/>
                                             }> 
                 </IconFigureCard>
-                <IconFigureCard cardTitle="Lattice" cardValue="200" Icon={
+                <IconFigureCard cardTitle="Lattice" cardValue={props.data.numUsersLattice} Icon={
                                         <PeopleAltIcon sx={{ fontSize: 60, color: 'white' }}/>
                                         }> 
                 </IconFigureCard>
-                <IconFigureCard cardTitle="Females" cardValue="200" Icon={
+                <IconFigureCard cardTitle="Females" cardValue={props.data.numFemales} Icon={
                                         <FemaleIcon sx={{ fontSize: 60, color: 'white' }}/>
                                         }> 
                 </IconFigureCard>
-                <IconFigureCard cardTitle="Discord" cardValue="50" Icon={
+                <IconFigureCard cardTitle="Discord" cardValue={props.data.numUsersDiscord} Icon={
                                         <ForumIcon sx={{ fontSize: 60, color: 'white' }}/>
                                         }> 
                 </IconFigureCard>
@@ -58,8 +58,8 @@ const LiveDashboard = function(props){
             <StyledRow>
                 {/* <PieChartCard cardTitle="Gender" cardLabel="Count" cardValue="250" chartType={'donut'}></PieChartCard> */}
                 <BarChartCard cardTitle="Age" cardLabel="Current" cardValue="18+"></BarChartCard>
-                <PieChartCard cardTitle="Education" cardLabel="Majors" cardValue="250" chartType={'pie'}></PieChartCard>
-                <BarChartCard cardTitle="Hackathon Experience" cardLabel="Count" cardValue="250"></BarChartCard>
+                <PieChartCard cardTitle="Education" cardLabel="Majors" cardValue={props.data.numMajors} chartType={'pie'}></PieChartCard>
+                <BarChartCard cardTitle="Hackathon Experience" cardLabel="Count" cardValue={props.data.totalHackathons}></BarChartCard>
             </StyledRow>
         </div>
     );
