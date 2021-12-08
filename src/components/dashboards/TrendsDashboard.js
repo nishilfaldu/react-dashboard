@@ -5,10 +5,9 @@ import styled from 'styled-components';
 const StyledRow = styled.div`
     display: flex;
     padding-top: 5rem;
-    // justify-content: space-evenly;
-    padding-bottom: 1rem;
-    flex-direction: column;
-    // background: red;
+    justify-content: center;
+    padding-left: 15rem;
+    flex-direction: row;
 `
 
 const TrendsDashboard = function(){
