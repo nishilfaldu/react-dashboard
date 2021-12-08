@@ -25,7 +25,7 @@ const Carousel = function({ children }){
                 })}
             </div>
 
-            <div className='indicators'>
+            <div className='indicators' style={{paddingLeft: '10rem'}}>
                 {React.Children.map(children, (child, index) => {
                     return(
                         // <button 
