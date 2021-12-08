@@ -25,7 +25,7 @@ const Carousel = function({ children }){
                 })}
             </div>
 
-            <div className='indicators' style={{paddingLeft: '10rem'}}>
+            <div className='indicators' style={{paddingLeft: '15rem'}}>
                 {React.Children.map(children, (child, index) => {
                     return(
                         <img className='logo' onClick={() => {
