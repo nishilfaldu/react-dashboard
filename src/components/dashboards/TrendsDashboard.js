@@ -18,7 +18,7 @@ const StyledRow = styled.div`
     justify-content: space-between;
     // padding-bottom: 1rem;
     padding-left: 15rem;
-    padding-top: 1.5rem;
+    padding-top: 3rem;
     // height: 15rem;
 `
 
@@ -26,9 +26,15 @@ const TrendsDashboard = function(props){
     return(
         <div>
             <StyledRow>
-                <PieChartCard cardTitle="Gender" cardLabel="Female" cardValue='5' chartType={'pie'} labelData={props.data.labelGenders} seriesData={props.data.seriesGender}></PieChartCard>
-                <BarChartCard cardTitle="Age" cardLabel="Current" cardValue='18+' labelData={props.data.labelAges} seriesData={props.data.seriesAge}></BarChartCard>
-                <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue='7' chartType={'pie'} labelData={props.data.labelEthnicities} seriesData={props.data.seriesEthnicities}></PieChartCard>
+                <div style={{paddingRight: '1rem'}}>
+                    <PieChartCard cardTitle="Gender" cardLabel="Female" cardValue='5' chartType={'pie'} labelData={props.data.labelGenders} seriesData={props.data.seriesGender}></PieChartCard>
+                </div>
+                <div style={{paddingRight: '1rem'}}>
+                    <BarChartCard cardTitle="Age" cardLabel="Current" cardValue='18+' labelData={props.data.labelAges} seriesData={props.data.seriesAge}></BarChartCard>
+                </div>
+                <div>
+                    <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue='7' chartType={'pie'} labelData={props.data.labelEthnicities} seriesData={props.data.seriesEthnicities}></PieChartCard>
+                </div>
             </StyledRow>
 
             {/* <StyledRow>
