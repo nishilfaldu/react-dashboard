@@ -1,5 +1,5 @@
 import React from 'react';
-import TrendsDashboard from '../dashboards/TrendsDashboard';
+import TrendsParticipationChart from '../dashboards/TrendsParticipationChart';
 import styled from 'styled-components';
 import { useState } from 'react';
 import Tab from '../menus/Tab';
@@ -10,8 +10,7 @@ import Carousel from '../carousel/Carousel';
 import CarouselItem from '../carousel/CarouselItem';
 import PieChartCard from '../cards/charts/PieChartCard';
 import BarChartCard from '../cards/charts/BarChartCard';
-import YearlyDashboard from '../dashboards/YearlyDashboard';
-import NavbarLogo from '../navbar/NavbarLogo';
+import TrendsDashboard from '../dashboards/TrendsDashboard';
 import Navbar from '../navbar/Navbar';
 
 const StyledRow = styled.div`
@@ -37,12 +36,12 @@ const TrendsPage = function(props){
 
     let toRender;
     if (data === 'participation'){
-        toRender = <TrendsDashboard></TrendsDashboard>
+        toRender = <TrendsParticipationChart></TrendsParticipationChart>
     }
     else if (data === 'demographics'){
         toRender = <Carousel>
             <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2014.png' alt='revuc-spring-2014'>
-                <YearlyDashboard></YearlyDashboard>
+                <TrendsDashboard></TrendsDashboard>
             </CarouselItem>
             <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-fall-2014.png' alt='revuc-fall-2014'>
                 <BarChartCard cardTitle="Registrants" cardLabel="Today" cardValue="250"></BarChartCard>
