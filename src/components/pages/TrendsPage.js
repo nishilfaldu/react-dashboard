@@ -16,8 +16,13 @@ import Navbar from '../navbar/Navbar';
 
 const StyledRow = styled.div`
     display: flex;
-    justify-content: space-evenly;
+    position: relative;
+    top: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding-bottom: 1rem;
+    padding-left: 15rem;
 `
 
 const TrendsPage = function(props){
