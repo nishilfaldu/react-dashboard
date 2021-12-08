@@ -46,7 +46,7 @@ const TrendsPage = function(props){
             {
                 Object.keys(logosData).map(
                     (key, index) => {
-                        return (<CarouselItem key={index} src={logosData[key]['imgUrl']} alt={logosData[key]['imgAlt']}><TrendsParticipationChart data={participationData}></TrendsParticipationChart></CarouselItem>)
+                        return (<CarouselItem key={index} src={logosData[key]['imgUrl']} alt={logosData[key]['imgAlt']}><TrendsDashboard data={demographicData}></TrendsDashboard></CarouselItem>)
                     }
                 )
             }
