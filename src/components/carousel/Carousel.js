@@ -28,11 +28,6 @@ const Carousel = function({ children }){
             <div className='indicators' style={{paddingLeft: '10rem'}}>
                 {React.Children.map(children, (child, index) => {
                     return(
-                        // <button 
-                        // onClick={() => {
-                        //     updateIndex(index);
-                        // }}
-                        // style={{backgroundImage:'url(/src/assets/images/revuc-fall-2014.png)', width:'100rem', height:'10rem'}}></button>
                         <img className='logo' onClick={() => {
                                 updateIndex(index);
                             }} 
