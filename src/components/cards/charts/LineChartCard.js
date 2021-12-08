@@ -59,7 +59,7 @@ const LineChartCard = function(props){
             show: true,
             position: 'bottom',
             fontSize: '14px',
-            offsetY: 8,
+            offsetY: 30,
             labels: {
                 colors: [],
             },
@@ -71,6 +71,8 @@ const LineChartCard = function(props){
                 radius: 7,
                 size: 50,
                 shape: 'circle',
+                offsetX: 0,
+                offsetY: 0
             }
         },
         xaxis: {
@@ -79,7 +81,18 @@ const LineChartCard = function(props){
         grid: {
             show: false,
             borderColor: '#f1f1f1',
-        },  
+        },
+        tooltip: { enabled: true,
+            x : {
+              show: true,
+            },
+            theme: 'dark',
+            // y: {
+            //   formatter: function (val) {
+            //     return val + " hackers"
+            //   }
+            // }
+         }  
         
     });
 

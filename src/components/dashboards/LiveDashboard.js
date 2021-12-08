@@ -9,6 +9,7 @@ import PublicIcon from '@mui/icons-material/Public';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import ForumIcon from '@mui/icons-material/Forum';
 import styled from 'styled-components';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 
 const StyledRow = styled.div`
     display: flex;
@@ -31,7 +32,7 @@ const LiveDashboard = function(props){
                                             }> 
                 </IconFigureCard>
                 <IconFigureCard cardTitle="States" cardValue={props.data.numStates} Icon={
-                                        <LanguageIcon sx={{ fontSize: 60, color: 'white' }}/>
+                                        <AutoAwesomeIcon sx={{ fontSize: 60, color: 'white' }}/>
                                         }> 
                 </IconFigureCard>
             </StyledRow>

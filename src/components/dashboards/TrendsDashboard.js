@@ -4,8 +4,11 @@ import styled from 'styled-components';
 
 const StyledRow = styled.div`
     display: flex;
-    justify-content: space-evenly;
+    padding-top: 5rem;
+    // justify-content: space-evenly;
     padding-bottom: 1rem;
+    flex-direction: column;
+    // background: red;
 `
 
 const TrendsDashboard = function(){
