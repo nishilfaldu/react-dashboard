@@ -12,6 +12,7 @@ import PieChartCard from '../cards/charts/PieChartCard';
 import BarChartCard from '../cards/charts/BarChartCard';
 import TrendsDashboard from '../dashboards/TrendsDashboard';
 import Navbar from '../navbar/Navbar';
+import participationData from '../../assets/data/trends/participation';
 
 const StyledRow = styled.div`
     display: flex;
@@ -36,12 +37,12 @@ const TrendsPage = function(props){
 
     let toRender;
     if (data === 'participation'){
-        toRender = <TrendsParticipationChart></TrendsParticipationChart>
+        toRender = <TrendsParticipationChart data={participationData}></TrendsParticipationChart>
     }
     else if (data === 'demographics'){
         toRender = <Carousel>
             <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2014.png' alt='revuc-spring-2014'>
-                <TrendsDashboard></TrendsDashboard>
+                {/* <TrendsDashboard></TrendsDashboard> */}
             </CarouselItem>
             <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-fall-2014.png' alt='revuc-fall-2014'>
                 <BarChartCard cardTitle="Registrants" cardLabel="Today" cardValue="250"></BarChartCard>

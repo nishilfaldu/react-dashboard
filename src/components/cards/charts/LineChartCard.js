@@ -17,19 +17,19 @@ const LineChartCard = function(props){
         series: [
             {
                 name: 'Registrants',
-                data: [45, 52, 38, 24, 33, 26, 21, 20]
+                data: props.seriesData.seriesRegistrants
             },
             {
                 name: 'Participants',
-                data: [35, 41, 62, 42, 13, 18, 29, 37]
+                data: props.seriesData.seriesParticipants
             },
             {
                 name: 'Submissions',
-                data: [87, 57, 74, 99, 75, 38, 62, 47]
+                data: props.seriesData.seriesSubmissions
             },
             {
                 name: 'Sponsors',
-                data: [99, 123, 63, 94, 70, 44, 32, 94]
+                data: props.seriesData.seriesSponsors
             }
         ],
         chart: {
@@ -76,7 +76,7 @@ const LineChartCard = function(props){
             }
         },
         xaxis: {
-            categories: ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021'],
+            categories: props.seriesData.seriesHackCategories,
         },
         grid: {
             show: false,

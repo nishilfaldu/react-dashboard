@@ -10,11 +10,11 @@ const StyledRow = styled.div`
     flex-direction: row;
 `
 
-const TrendsParticipationChart = function(){
+const TrendsParticipationChart = function(props){
     return(
         <div>
             <StyledRow>
-                <LineChartCard cardTitle='Experience' cardLabel='Hackathons' cardValue='10'></LineChartCard>
+                <LineChartCard cardTitle='Experience' cardLabel='Hackathons' cardValue='10' seriesData={props.data}></LineChartCard>
             </StyledRow>
         </div>
     );
