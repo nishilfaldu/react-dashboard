@@ -43,43 +43,47 @@ const TrendsPage = function(props){
     }
     else if (data === 'demographics'){
         toRender = <Carousel>
-            {/* { */}
-                // for(let i = 0; i < Object.keys())
-            // }
+            {
+                Object.keys(logosData).map(
+                    (key, index) => {
+                        return (<CarouselItem key={index} src={key.imgUrl} alt={key.imgAlt}><TrendsParticipationChart data={participationData}></TrendsParticipationChart></CarouselItem>)
+                    }
+                )
+            }
         </Carousel>
 
-        toRender = <Carousel>
-            <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2014.png' alt='revuc-spring-2014'>
-                {/* <TrendsDashboard></TrendsDashboard> */}
-            </CarouselItem>
-            <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-fall-2014.png' alt='revuc-fall-2014'>
-                <BarChartCard cardTitle="Registrants" cardLabel="Today" cardValue="250"></BarChartCard>
-            </CarouselItem>
-            <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2015.png' alt='revuc-spring-2015'>
-                <PieChartCard cardTitle="Education" cardLabel="Degrees" cardValue="250" chartType={'pie'}></PieChartCard>
-            </CarouselItem>
-            <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2016.png' alt='revuc-spring-2016'>
-                <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue="250" chartType={'pie'}></PieChartCard>
-            </CarouselItem>
-            <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-fall-2016.png' alt='revuc-fall-2016'>
-                <BarChartCard cardTitle="Registrants" cardLabel="Today" cardValue="250"></BarChartCard>
-            </CarouselItem>
-            <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2017.png' alt='revuc-spring-2017'>
-                <PieChartCard cardTitle="Education" cardLabel="Degrees" cardValue="250" chartType={'pie'}></PieChartCard>
-            </CarouselItem>
-            <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2018.png' alt='revuc-spring-2018'>
-                <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue="250" chartType={'pie'}></PieChartCard>
-            </CarouselItem>
-            <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2019.png' alt='revuc-spring-2019'>
-                <BarChartCard cardTitle="Registrants" cardLabel="Today" cardValue="250"></BarChartCard>
-            </CarouselItem>
-            <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2020.png' alt='revuc-spring-2020'>
-                <PieChartCard cardTitle="Education" cardLabel="Degrees" cardValue="250" chartType={'pie'}></PieChartCard>
-            </CarouselItem>
-            <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2021.png' alt='revuc-spring-2021'>
-                <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue="250" chartType={'pie'}></PieChartCard>
-            </CarouselItem>
-        </Carousel>
+        // toRender = <Carousel>
+        //     <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2014.png' alt='revuc-spring-2014'>
+        //         {/* <TrendsDashboard></TrendsDashboard> */}
+        //     </CarouselItem>
+        //     <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-fall-2014.png' alt='revuc-fall-2014'>
+        //         <BarChartCard cardTitle="Registrants" cardLabel="Today" cardValue="250"></BarChartCard>
+        //     </CarouselItem>
+        //     <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2015.png' alt='revuc-spring-2015'>
+        //         <PieChartCard cardTitle="Education" cardLabel="Degrees" cardValue="250" chartType={'pie'}></PieChartCard>
+        //     </CarouselItem>
+        //     <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2016.png' alt='revuc-spring-2016'>
+        //         <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue="250" chartType={'pie'}></PieChartCard>
+        //     </CarouselItem>
+        //     <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-fall-2016.png' alt='revuc-fall-2016'>
+        //         <BarChartCard cardTitle="Registrants" cardLabel="Today" cardValue="250"></BarChartCard>
+        //     </CarouselItem>
+        //     <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2017.png' alt='revuc-spring-2017'>
+        //         <PieChartCard cardTitle="Education" cardLabel="Degrees" cardValue="250" chartType={'pie'}></PieChartCard>
+        //     </CarouselItem>
+        //     <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2018.png' alt='revuc-spring-2018'>
+        //         <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue="250" chartType={'pie'}></PieChartCard>
+        //     </CarouselItem>
+        //     <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2019.png' alt='revuc-spring-2019'>
+        //         <BarChartCard cardTitle="Registrants" cardLabel="Today" cardValue="250"></BarChartCard>
+        //     </CarouselItem>
+        //     <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2020.png' alt='revuc-spring-2020'>
+        //         <PieChartCard cardTitle="Education" cardLabel="Degrees" cardValue="250" chartType={'pie'}></PieChartCard>
+        //     </CarouselItem>
+        //     <CarouselItem src='https://raw.githubusercontent.com/RevolutionUC/revolutionuc-frontend/master/img/revuc-logos/revuc-spring-2021.png' alt='revuc-spring-2021'>
+        //         <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue="250" chartType={'pie'}></PieChartCard>
+        //     </CarouselItem>
+        // </Carousel>
     }
     else if (data === 'education'){
         toRender = <div style={{color: 'white'}}>EDUCATION</div>
