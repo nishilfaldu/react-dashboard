@@ -4,15 +4,6 @@ import styled from 'styled-components';
 import BarChartCard from '../cards/charts/BarChartCard';
 import PieChartCard from '../cards/charts/PieChartCard';
 
-// const StyledRow = styled.div`
-//     display: flex;
-//     flex-direction: row;
-//     padding-top: 1.5rem;
-//     justify-content: space-evenly;
-//     align-items: center;
-//     padding-left: 14rem;
-// `
-
 const StyledRow = styled.div`
     display: flex;
     justify-content: space-between;
