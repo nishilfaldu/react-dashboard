@@ -53,8 +53,15 @@ const TrendsPage = function(props){
         </Carousel>
     }
     else if (data === 'education'){
-        toRender = <div style={{color: 'white'}}>EDUCATION</div>
-        // toRender = <NavbarLogo></NavbarLogo>
+        toRender = <Carousel>
+            {
+                Object.keys(logosData).map(
+                    (key, index) => {
+                        return (<CarouselItem key={index} src={logosData[key]['imgUrl']} alt={logosData[key]['imgAlt']}><TrendsDashboard data={demographicData[key]}></TrendsDashboard></CarouselItem>);
+                    }
+                )
+            }
+        </Carousel>
     }
     else {
         toRender = <div style={{color: 'white'}}>WELCOME TO THE TRENDS DASHBOARD!</div>
