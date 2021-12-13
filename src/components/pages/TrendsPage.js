@@ -11,6 +11,7 @@ import CarouselItem from '../carousel/CarouselItem';
 import PieChartCard from '../cards/charts/PieChartCard';
 import BarChartCard from '../cards/charts/BarChartCard';
 import TrendsDemograhicDashboard from '../dashboards/TrendsDemographicDashboard';
+import TrendsEducationDashboard from '../dashboards/TrendsEducationDashboard';
 import Navbar from '../navbar/Navbar';
 import participationData from '../../assets/data/trends/participation';
 import demographicData from '../../assets/data/trends/demographic';
@@ -58,7 +59,7 @@ const TrendsPage = function(props){
             {
                 Object.keys(logosData).map(
                     (key, index) => {
-                        return (<CarouselItem key={index} src={logosData[key]['imgUrl']} alt={logosData[key]['imgAlt']}><TrendsDemograhicDashboard data={educationData[key]}></TrendsDemograhicDashboard></CarouselItem>);
+                        return (<CarouselItem key={index} src={logosData[key]['imgUrl']} alt={logosData[key]['imgAlt']}><TrendsEducationDashboard data={educationData[key]}></TrendsEducationDashboard></CarouselItem>);
                     }
                 )
             }
