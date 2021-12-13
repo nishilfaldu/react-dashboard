@@ -15,6 +15,7 @@ import Navbar from '../navbar/Navbar';
 import participationData from '../../assets/data/trends/participation';
 import demographicData from '../../assets/data/trends/demographic';
 import logosData from '../../assets/data/images/logos';
+import educationData from '../../assets/data/trends/education';
 
 const StyledRow = styled.div`
     display: flex;
@@ -57,7 +58,7 @@ const TrendsPage = function(props){
             {
                 Object.keys(logosData).map(
                     (key, index) => {
-                        return (<CarouselItem key={index} src={logosData[key]['imgUrl']} alt={logosData[key]['imgAlt']}><TrendsDashboard data={demographicData[key]}></TrendsDashboard></CarouselItem>);
+                        return (<CarouselItem key={index} src={logosData[key]['imgUrl']} alt={logosData[key]['imgAlt']}><TrendsDashboard data={educationData[key]}></TrendsDashboard></CarouselItem>);
                     }
                 )
             }
