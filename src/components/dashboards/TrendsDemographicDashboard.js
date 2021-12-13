@@ -13,7 +13,7 @@ const StyledRow = styled.div`
     // height: 15rem;
 `
 
-const TrendsDashboard = function(props){
+const TrendsDemographicDashboard = function(props){
     return(
         <div>
             <StyledRow>
@@ -37,4 +37,4 @@ const TrendsDashboard = function(props){
     );
 }
 
-export default TrendsDashboard;
+export default TrendsDemographicDashboard;
