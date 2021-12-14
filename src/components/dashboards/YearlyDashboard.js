@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import PieChartCard from '../cards/charts/PieChartCard';
-import BarChartCard from '../cards/charts/BarChartCard';
 import BadgeFigureCard from '../cards/figures/BadgeFigureCard';
 import IconFigureCard from '../cards/figures/IconFigureCard';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
@@ -36,11 +35,11 @@ const YearlyDashboard = function(props){
             </StyledRow>
 
             <StyledRow>
-                <IconFigureCard cardTitle="Sponsors" cardValue={props.data.numCountries} Icon={
+                <IconFigureCard cardTitle="Sponsors" cardValue={props.data.numSponsors} Icon={
                                             <AttachMoneyIcon sx={{ fontSize: 60, color: 'white' }}/>
                                             }> 
                 </IconFigureCard>
-                <IconFigureCard cardTitle="Submissions" cardValue={props.data.numUsersLattice} Icon={
+                <IconFigureCard cardTitle="Submissions" cardValue={props.data.numSubmissions} Icon={
                                         <PublishIcon sx={{ fontSize: 60, color: 'white' }}/>
                                         }> 
                 </IconFigureCard>
@@ -48,7 +47,7 @@ const YearlyDashboard = function(props){
                                         <FemaleIcon sx={{ fontSize: 60, color: 'white' }}/>
                                         }> 
                 </IconFigureCard>
-                <IconFigureCard cardTitle="Confirmed" cardValue={props.data.numUsersDiscord} Icon={
+                <IconFigureCard cardTitle="Confirmed" cardValue={props.data.numConfirmed} Icon={
                                         <HowToRegIcon sx={{ fontSize: 60, color: 'white' }}/>
                                         }> 
                 </IconFigureCard>
@@ -56,8 +55,8 @@ const YearlyDashboard = function(props){
 
             <StyledRow>
                 <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue="7" chartType={'pie'} labelData={props.data.labelAges} seriesData={props.data.seriesAge}></PieChartCard>
-                <PieChartCard cardTitle="Gender" cardLabel="Female" cardValue={props.data.numMajors} chartType={'pie'} labelData={props.data.labelMajors} seriesData={props.data.seriesMajors}></PieChartCard>
-                <PieChartCard cardTitle="Majors" cardLabel="Count" cardValue={props.data.totalHackathons} chartType={'pie'} labelData={props.data.labelHackExperience} seriesData={props.data.seriesHackExperience}></PieChartCard>
+                <PieChartCard cardTitle="Gender" cardLabel="Female" cardValue={props.data.numMajors} chartType={'pie'} labelData={props.data.labelGenders} seriesData={props.data.seriesGenders}></PieChartCard>
+                <PieChartCard cardTitle="Majors" cardLabel="Count" cardValue="50" chartType={'pie'} labelData={props.data.labelMajors} seriesData={props.data.seriesMajors}></PieChartCard>
             </StyledRow>
 
             {/* <StyledRow>
