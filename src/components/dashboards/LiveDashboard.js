@@ -4,7 +4,6 @@ import IconFigureCard from '../cards/figures/IconFigureCard';
 import BadgeFigureCard from '../cards/figures/BadgeFigureCard';
 import SchoolIcon from '@mui/icons-material/School';
 import FemaleIcon from '@mui/icons-material/Female';
-import LanguageIcon from '@mui/icons-material/Language';
 import PublicIcon from '@mui/icons-material/Public';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import ForumIcon from '@mui/icons-material/Forum';
