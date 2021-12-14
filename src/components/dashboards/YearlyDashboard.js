@@ -13,13 +13,9 @@ const StyledRow = styled.div`
     display: flex;
     justify-content: space-evenly;
     padding-bottom: 1rem;
+    padding-left: 15rem;
+    // padding-top: 1rem;
 `
-// const StyledRow = styled.div`
-//     display: flex;
-//     justify-content: space-evenly;
-//     padding-bottom: 1rem;
-//     padding-left: 15rem;
-// `
 
 const YearlyDashboard = function(props){
     return(
@@ -60,9 +56,9 @@ const YearlyDashboard = function(props){
             </StyledRow>
 
             <StyledRow>
-                <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue="7" chartType={'pie'} labelData={props.data.labelAges} seriesData={props.data.seriesAge}></PieChartCard>
-                <PieChartCard cardTitle="Gender" cardLabel="Female" cardValue={props.data.numMajors} chartType={'pie'} labelData={props.data.labelGenders} seriesData={props.data.seriesGenders}></PieChartCard>
-                <PieChartCard cardTitle="Majors" cardLabel="Count" cardValue="50" chartType={'pie'} labelData={props.data.labelMajors} seriesData={props.data.seriesMajors}></PieChartCard>
+                <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue="7" chartType={'pie'} labelData={props.data.labelEthnicities} seriesData={props.data.seriesEthnicities}></PieChartCard>
+                <PieChartCard cardTitle="Gender" cardLabel="Female" cardValue='50' chartType={'pie'} labelData={props.data.labelGenders} seriesData={props.data.seriesGenders}></PieChartCard>
+                <PieChartCard cardTitle="Majors" cardLabel="Count" cardValue={props.data.numMajors} chartType={'pie'} labelData={props.data.labelMajors} seriesData={props.data.seriesMajors}></PieChartCard>
             </StyledRow>
 
             {/* <StyledRow>
