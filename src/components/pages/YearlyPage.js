@@ -10,9 +10,9 @@ import CarouselItem from '../carousel/CarouselItem';
 const StyledRow = styled.div`
     display: flex;
     justify-content: space-evenly;
-    padding-top: 1rem;
-    padding-bottom: 1.3rem;
-    padding-left: 14rem;
+    padding-top: 0.8rem;
+    // padding-bottom: 1.3rem;
+    padding-left: 2rem;
 `
 
 const YearlyPage = function(props){
@@ -23,7 +23,7 @@ const YearlyPage = function(props){
             {
                 Object.keys(logosData).map(
                     (key, index) => {
-                        return (<CarouselItem key={index} src={logosData[key]['imgUrl']} alt={logosData[key]['imgAlt']}><YearlyDashboard data={annualData[key]}></YearlyDashboard></CarouselItem>);
+                        return (<CarouselItem key={index} src={logosData[key]['imgUrl']} alt={logosData[key]['imgAlt']}><StyledRow><YearlyDashboard data={annualData[key]}></YearlyDashboard></StyledRow></CarouselItem>);
                     }
                 )
             }
