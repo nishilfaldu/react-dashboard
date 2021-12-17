@@ -10,7 +10,6 @@ import CarouselItem from '../carousel/CarouselItem';
 const StyledRow = styled.div`
     display: flex;
     justify-content: space-evenly;
-    // align-items: center;
     padding-top: 0.8rem;
     // padding-bottom: 1.3rem;
     padding-left: 2rem;
@@ -20,7 +19,7 @@ const YearlyPage = function(props){
     return(
         <div>
             <Navbar/>
-            <Carousel>
+            <Carousel marginTopCarouselItem='-2rem'>
             {
                 Object.keys(logosData).map(
                     (key, index) => {

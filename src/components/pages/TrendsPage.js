@@ -42,7 +42,7 @@ const TrendsPage = function(props){
         toRender = <TrendsParticipationChart data={participationData}></TrendsParticipationChart>
     }
     else if (data === 'demographics'){
-        toRender = <Carousel>
+        toRender = <Carousel marginTopCarouselItem='2rem'>
             {
                 Object.keys(logosData).map(
                     (key, index) => {
@@ -53,7 +53,7 @@ const TrendsPage = function(props){
         </Carousel>
     }
     else if (data === 'education'){
-        toRender = <Carousel>
+        toRender = <Carousel marginTopCarouselItem='2rem'>
             {
                 Object.keys(logosData).map(
                     (key, index) => {

@@ -2,7 +2,7 @@ import React from 'react';
 import '../../assets/css/Carousel.css';
 import { useState } from 'react';
 
-const Carousel = function({ children }){
+const Carousel = function({ children, ...other }){
 
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -25,7 +25,7 @@ const Carousel = function({ children }){
                 })}
             </div>
 
-            <div className='indicators' style={{paddingLeft: '15rem'}}>
+            <div className='indicators' style={{paddingLeft: '15rem', marginTop: other.marginTopCarouselItem}}>
                 {React.Children.map(children, (child, index) => {
                     return(
                         <img className='logo' onClick={() => {

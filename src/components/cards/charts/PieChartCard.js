@@ -85,7 +85,7 @@ const PieChartCard = function(props){
                 <br></br>
                 {props.cardValue}
                 <ChartDiv>
-                  <Chart options={options} series={options.series} type={props.chartType} height="auto" width="100%"/>
+                  <Chart options={options} series={options.series} type={props.chartType} height="auto" width={props.pieWidth ? props.pieWidth : '100%'}/>
                 </ChartDiv>
             </SimpleCard>
         </ThemeProvider>

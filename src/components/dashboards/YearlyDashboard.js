@@ -67,12 +67,12 @@ const YearlyDashboard = function(props){
 
             <StyledRow>
             <div style={{paddingRight: '0.7rem'}}>
-                <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue="7" chartType={'pie'} labelData={props.data.labelEthnicities} seriesData={props.data.seriesEthnicities}></PieChartCard>
+                <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue="7" chartType={'pie'} labelData={props.data.labelEthnicities} seriesData={props.data.seriesEthnicities} pieWidth='100%'></PieChartCard>
                 </div>
                 <div style={{paddingRight: '0.7rem'}}>
-                <PieChartCard cardTitle="Gender" cardLabel="Female" cardValue='50' chartType={'pie'} labelData={props.data.labelGenders} seriesData={props.data.seriesGenders}></PieChartCard>
+                <PieChartCard cardTitle="Gender" cardLabel="Female" cardValue='50' chartType={'pie'} labelData={props.data.labelGenders} seriesData={props.data.seriesGenders} pieWidth='100%'></PieChartCard>
                 </div>
-                <PieChartCard cardTitle="Majors" cardLabel="Count" cardValue={props.data.numMajors} chartType={'pie'} labelData={props.data.labelMajors} seriesData={props.data.seriesMajors}></PieChartCard>
+                <PieChartCard cardTitle="Majors" cardLabel="Count" cardValue={props.data.numMajors} chartType={'pie'} labelData={props.data.labelMajors} seriesData={props.data.seriesMajors} pieWidth='100%'></PieChartCard>
                 
             </StyledRow>
 
