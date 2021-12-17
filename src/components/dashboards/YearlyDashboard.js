@@ -14,22 +14,26 @@ const StyledRow = styled.div`
     justify-content: space-evenly;
     padding-bottom: 1rem;
     padding-left: 15rem;
-    // padding-top: 1rem;
+    // padding-top: 0.5rem;
 `
 
 const YearlyDashboard = function(props){
     return(
         <div>
             <StyledRow>
+                <div style={{paddingRight: '1rem'}}>
                 <BadgeFigureCard LabelOne="Registrants"
                                 ValueOne={props.data.numRegistrants}
                                 LabelTwo="Participants"
                                 ValueTwo={props.data.numParticipants}>
                 </BadgeFigureCard>
+                </div>
+                <div style={{paddingRight: '1rem'}}>
                 <IconFigureCard cardTitle="Schools" cardValue={props.data.numSchools} Icon={
                                             <SchoolIcon sx={{ fontSize: 60, color: 'white' }}/>
                                             }> 
                 </IconFigureCard>
+                </div>
                 <IconFigureCard cardTitle="States" cardValue={props.data.numStates} Icon={
                                         <AutoAwesomeIcon sx={{ fontSize: 60, color: 'white' }}/>
                                         }> 
@@ -37,18 +41,24 @@ const YearlyDashboard = function(props){
             </StyledRow>
 
             <StyledRow>
+                <div style={{paddingRight: '0.7rem'}}>
                 <IconFigureCard cardTitle="Sponsors" cardValue={props.data.numSponsors} Icon={
                                             <AttachMoneyIcon sx={{ fontSize: 60, color: 'white' }}/>
                                             }> 
                 </IconFigureCard>
+                </div>
+                <div style={{paddingRight: '0.7rem'}}>
                 <IconFigureCard cardTitle="Submissions" cardValue={props.data.numSubmissions} Icon={
                                         <PublishIcon sx={{ fontSize: 60, color: 'white' }}/>
                                         }> 
                 </IconFigureCard>
+                </div>
+                <div style={{paddingRight: '0.7rem'}}>
                 <IconFigureCard cardTitle="Females" cardValue={props.data.numFemales} Icon={
                                         <FemaleIcon sx={{ fontSize: 60, color: 'white' }}/>
                                         }> 
                 </IconFigureCard>
+                </div>
                 <IconFigureCard cardTitle="Confirmed" cardValue={props.data.numConfirmed} Icon={
                                         <HowToRegIcon sx={{ fontSize: 60, color: 'white' }}/>
                                         }> 
@@ -56,9 +66,14 @@ const YearlyDashboard = function(props){
             </StyledRow>
 
             <StyledRow>
+            <div style={{paddingRight: '0.7rem'}}>
                 <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue="7" chartType={'pie'} labelData={props.data.labelEthnicities} seriesData={props.data.seriesEthnicities}></PieChartCard>
+                </div>
+                <div style={{paddingRight: '0.7rem'}}>
                 <PieChartCard cardTitle="Gender" cardLabel="Female" cardValue='50' chartType={'pie'} labelData={props.data.labelGenders} seriesData={props.data.seriesGenders}></PieChartCard>
+                </div>
                 <PieChartCard cardTitle="Majors" cardLabel="Count" cardValue={props.data.numMajors} chartType={'pie'} labelData={props.data.labelMajors} seriesData={props.data.seriesMajors}></PieChartCard>
+                
             </StyledRow>
 
             {/* <StyledRow>

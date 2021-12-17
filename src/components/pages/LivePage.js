@@ -14,7 +14,7 @@ import checkedinData from '../../assets/data/live/checkedin';
 const StyledRow = styled.div`
     display: flex;
     justify-content: space-evenly;
-    padding-bottom: 1.3rem;
+    padding-bottom: 1rem;
     padding-left: 15rem;
 `
 

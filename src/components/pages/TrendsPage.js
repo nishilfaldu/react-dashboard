@@ -8,8 +8,6 @@ import AnalyticsIcon from '@mui/icons-material/Analytics';
 import SchoolIcon from '@mui/icons-material/School';
 import Carousel from '../carousel/Carousel';
 import CarouselItem from '../carousel/CarouselItem';
-import PieChartCard from '../cards/charts/PieChartCard';
-import BarChartCard from '../cards/charts/BarChartCard';
 import TrendsDemograhicDashboard from '../dashboards/TrendsDemographicDashboard';
 import TrendsEducationDashboard from '../dashboards/TrendsEducationDashboard';
 import Navbar from '../navbar/Navbar';
