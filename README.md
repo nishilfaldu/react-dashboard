@@ -14,6 +14,13 @@ The project has the implementation of the following dashboards:
 3. Trends Dashboard
 
    ![](./src/assets/videos/trends.gif) 
+   
+## Usage
+# Libraries
+- React
+- Styled-Components
+- Material-UI
+- React ApexCharts
 
 ## Available Scripts
 
