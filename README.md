@@ -16,7 +16,7 @@ The project has the implementation of the following dashboards:
    ![](./src/assets/videos/trends.gif) 
    
 ## Usage
-# Libraries
+### Libraries
 - React
 - Styled-Components
 - Material-UI
