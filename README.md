@@ -1,6 +1,12 @@
-# react-dashboard
+# React Dashboard
 
 React Dashboard is a repository built for RevolutionUC (Spring Hackathon at University of Cincinnati) for Statistics Page. The primary focus was to built clean dashboards to display important data which in-turn would be used for data-driven marketing.
+
+The project has the implementation of the following dashboards:
+1. Live Dashboard
+   - https://user-images.githubusercontent.com/63477134/148533650-f32eac36-8c2a-4868-82f5-8229510107b1.mov
+2. Yearly Dashboard
+3. Trends Dashboard
 
 ## Available Scripts
 
