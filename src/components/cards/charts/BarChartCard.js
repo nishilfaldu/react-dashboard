@@ -3,7 +3,7 @@ import styled, { ThemeProvider } from "styled-components";
 import SimpleCard from "../card/SimpleCard";
 import theme from "../../themes/propBarChart"
 import Chart from 'react-apexcharts';
-// import { useState } from "react";
+import { useState } from "react";
 
 const ChartDiv = styled.div`
     display: flex;
