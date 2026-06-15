@@ -1,53 +1,64 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Switch,
-  NavLink
-} from 'react-router-dom';
-import NavButton from '../buttons/NavButton';
-import styled from 'styled-components';
-import LivePage from '../pages/LivePage';
-import YearlyPage from '../pages/YearlyPage';
-import TrendsPage from '../pages/TrendsPage';
-import { useState } from 'react';
+import { useState } from "react";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import styled from "styled-components";
+import NavButton from "../buttons/NavButton";
+import LivePage from "../pages/LivePage";
+import YearlyPage from "../pages/YearlyPage";
+import TrendsPage from "../pages/TrendsPage";
 
-const StyledRow = styled.div`
-    position: absolute;
-    top: 16rem;
-    left: 2rem;
-    z-index: 3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-`
+// Floating navigation pinned over the sidebar on desktop. On small screens the
+// sidebar collapses, so the nav drops into a normal horizontal row at the top.
+const Nav = styled.div`
+  position: absolute;
+  top: 16rem;
+  left: 2rem;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 
-const NavRoutes = function(){
+  @media (max-width: 960px) {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+`;
 
-    const [activeLink, setActiveLink] = useState('Live');
+const links = [
+  { label: "Live", to: "/" },
+  { label: "Yearly", to: "/yearly" },
+  { label: "Trends", to: "/trends" },
+];
 
-    return(
-        <div>
-            <Router>
-                <StyledRow>
-                    <Link to="/" style={{ textDecoration: 'none' }}><NavButton label="Live" checked={activeLink === 'Live' ? true : false} setData={setActiveLink}></NavButton></Link>
-                    <Link to="/yearly" style={{ textDecoration: 'none' }}><NavButton label="Yearly" checked={activeLink === 'Yearly' ? true : false} setData={setActiveLink}></NavButton></Link>
-                    <Link to="/trends" style={{ textDecoration: 'none' }}><NavButton label="Trends" checked={activeLink === 'Trends' ? true : false} setData={setActiveLink}></NavButton></Link>
-                </StyledRow>
+const NavRoutes = function () {
+  const [activeLink, setActiveLink] = useState("Live");
 
-                <Switch>
-                    <Route exact path='/' component={LivePage}></Route>
-                    <Route exact path='/yearly' component={YearlyPage}></Route>
-                    <Route exact path='/trends' component={TrendsPage}></Route>
-                </Switch>
-            </Router>
-        </div>
-    );
-    
-}
+  return (
+    <Router>
+      <Nav>
+        {links.map(({ label, to }) => (
+          <Link key={label} to={to} style={{ textDecoration: "none" }}>
+            <NavButton
+              label={label}
+              checked={activeLink === label}
+              setData={setActiveLink}
+            />
+          </Link>
+        ))}
+      </Nav>
+
+      <Switch>
+        <Route exact path="/" component={LivePage} />
+        <Route exact path="/yearly" component={YearlyPage} />
+        <Route exact path="/trends" component={TrendsPage} />
+      </Switch>
+    </Router>
+  );
+};
 
 export default NavRoutes;

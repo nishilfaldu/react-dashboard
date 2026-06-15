@@ -1,97 +1,65 @@
-# React Dashboard
+# RevolutionUC Dashboard
 
-React Dashboard is a repository built for RevolutionUC (Spring Hackathon at University of Cincinnati) for Statistics Page. The primary focus was to built clean dashboards to display important data which in-turn would be used for data-driven marketing.
+[![React](https://img.shields.io/badge/React-17-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
+[![MUI](https://img.shields.io/badge/MUI-5-007FFF?logo=mui&logoColor=white)](https://mui.com/)
+[![ApexCharts](https://img.shields.io/badge/charts-ApexCharts-008FFB)](https://apexcharts.com/)
+[![styled-components](https://img.shields.io/badge/styled--components-5-DB7093?logo=styledcomponents&logoColor=white)](https://styled-components.com/)
+![Hackathon](https://img.shields.io/badge/built%20for-RevolutionUC-E00122)
 
-The project has the implementation of the following dashboards:
-1. Live Dashboard
+A statistics dashboard built for **RevolutionUC**, the University of Cincinnati's
+student hackathon. It turns registration and participation data into clean,
+themeable charts the organizing team can use for data-driven decisions — live
+event numbers, year-over-year history, and longer-term trends.
 
-   ![](./src/assets/videos/live.gif)
+![Dashboard](docs/live.png)
 
-2. Yearly Dashboard
+## What's inside
 
-   ![](./src/assets/videos/yearly.gif)
-   
-3. Trends Dashboard
+Three views, switched from the sidebar:
 
-   ![](./src/assets/videos/trends.gif) 
-   
-## Usage
-### Libraries
-- React
-- Styled-Components
-- Material-UI
-- React ApexCharts
+| View | What it shows |
+|------|---------------|
+| **Live** | Real-time event figures (registrants, schools, states, countries, etc.) plus age, education, and experience charts. Toggle between *Registered*, *Confirmed*, and *Checked In* cohorts. |
+| **Yearly** | A per-event snapshot for each RevolutionUC, browsable through a logo carousel spanning 2014–2021. |
+| **Trends** | Longer-term breakdowns — participation over time, demographics, and education — across the program's history. |
 
+It's built from a small set of reusable, themed building blocks: figure cards
+(`IconFigureCard`, `BadgeFigureCard`), chart cards (`BarChartCard`,
+`PieChartCard`, `LineChartCard`), and a carousel — each driven by a theme object
+in `src/components/themes/` so colors, sizes, and spacing stay consistent.
 
-### How To Use The Project
-If you want to work off of this base to create your own Dashboard or Statistics Page, feel free to fork this project.
+## Responsive layout
 
+The dashboards reflow from a fixed-sidebar desktop layout to a stacked,
+full-width mobile layout. A single `--sidebar-width` CSS variable drives every
+page offset and collapses to zero on small screens, where the sidebar hides and
+navigation moves to a top row.
 
-### How To Install The Project
-1. Open terminal and clone the repository:
+<p>
+  <img src="docs/mobile.png" alt="Mobile layout" width="240" />
+</p>
+
+## Running it
+
+```bash
+npm install
+npm start          # opens http://localhost:3000
 ```
-git clone https://github.com/faldund7/react-dashboard.git
-```
-2. Install all the dependencies of the project
-```
-yarn install
-```
-3. In the project directory, you can run the app in development mode.
-```
-yarn start
-```
 
+Build a production bundle with `npm run build`.
 
-### How To Contribute To The Project
-- Create a personal fork of the project on Github.
-- Clone the fork on your local machine. Your remote repo on Github is called origin.
-- Add the original repository as a remote called upstream.
-- If you created your fork a while ago be sure to pull upstream changes into your local repository.
-- Create a new branch to work on! Branch from develop if it exists, else from master.
-- Implement/fix your feature, comment your code.
-- Follow the code style of the project, including indentation.
-- If the project has tests run them!
-- Write or adapt tests as needed.
-- Add or change the documentation as needed.
-- Squash your commits into a single commit with git's interactive rebase. Create a new branch if necessary.
-- Push your branch to your fork on Github, the remote origin.
-- From your fork open a pull request in the correct branch. Target the project's develop branch if there is one, else go for master!
-- Once the pull request is approved and merged you can pull the changes from upstream to your local repo and delete your extra branch(es).
+> Built with Create React App (react-scripts 4). On very recent Node versions you
+> may need `NODE_OPTIONS=--openssl-legacy-provider` when building.
 
+## Data
 
-## Available Scripts
+All figures live in `src/assets/data/`, split by view (`live/`, `annual/`,
+`trends/`) and keyed per event. The numbers here are representative sample data;
+swapping in real exports is just a matter of editing those files.
 
-In the project directory, you can run:
+## Notes
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Originally built for RevolutionUC and revisited since: the code has been cleaned
+up and reformatted, the layout made responsive, and a couple of latent issues
+fixed (a missing `react-router-dom` / `apexcharts` dependency and a dead remote
+logo URL) so it builds and runs from a clean checkout.

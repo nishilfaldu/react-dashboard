@@ -1,23 +1,24 @@
-import React from 'react';
-import LineChartCard from '../cards/charts/LineChartCard'; 
-import styled from 'styled-components';
+import styled from "styled-components";
+import LineChartCard from "../cards/charts/LineChartCard";
 
-const StyledRow = styled.div`
-    display: flex;
-    padding-top: 5rem;
-    justify-content: center;
-    padding-left: 15rem;
-    flex-direction: row;
-`
+const Row = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+  padding-left: var(--sidebar-width);
+`;
 
-const TrendsParticipationChart = function(props){
-    return(
-        <div>
-            <StyledRow>
-                <LineChartCard cardTitle='Experience' cardLabel='Hackathons' cardValue='10' seriesData={props.data}></LineChartCard>
-            </StyledRow>
-        </div>
-    );
-}
+const TrendsParticipationChart = function ({ data }) {
+  return (
+    <Row>
+      <LineChartCard
+        cardTitle="Experience"
+        cardLabel="Hackathons"
+        cardValue="10"
+        seriesData={data}
+      />
+    </Row>
+  );
+};
 
 export default TrendsParticipationChart;

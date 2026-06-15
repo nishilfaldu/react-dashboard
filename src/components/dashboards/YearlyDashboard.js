@@ -1,95 +1,101 @@
-import styled from 'styled-components';
-import PieChartCard from '../cards/charts/PieChartCard';
-import BadgeFigureCard from '../cards/figures/BadgeFigureCard';
-import IconFigureCard from '../cards/figures/IconFigureCard';
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
-import PublishIcon from '@mui/icons-material/Publish';
-import FemaleIcon from '@mui/icons-material/Female';
-import HowToRegIcon from '@mui/icons-material/HowToReg';
-import SchoolIcon from '@mui/icons-material/School';
-import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import styled from "styled-components";
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import PublishIcon from "@mui/icons-material/Publish";
+import FemaleIcon from "@mui/icons-material/Female";
+import HowToRegIcon from "@mui/icons-material/HowToReg";
+import SchoolIcon from "@mui/icons-material/School";
+import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
+import PieChartCard from "../cards/charts/PieChartCard";
+import BadgeFigureCard from "../cards/figures/BadgeFigureCard";
+import IconFigureCard from "../cards/figures/IconFigureCard";
 
-const StyledRow = styled.div`
-    display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 1rem;
-    padding-left: 15rem;
-    // padding-top: 0.5rem;
-`
+const Row = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding-bottom: 1rem;
+  padding-left: var(--sidebar-width);
+`;
 
-const YearlyDashboard = function(props){
-    return(
-        <div>
-            <StyledRow>
-                <div style={{paddingRight: '1rem'}}>
-                <BadgeFigureCard LabelOne="Registrants"
-                                ValueOne={props.data.numRegistrants}
-                                LabelTwo="Participants"
-                                ValueTwo={props.data.numParticipants}>
-                </BadgeFigureCard>
-                </div>
-                <div style={{paddingRight: '1rem'}}>
-                <IconFigureCard cardTitle="Schools" cardValue={props.data.numSchools} Icon={
-                                            <SchoolIcon sx={{ fontSize: 60, color: 'white' }}/>
-                                            }> 
-                </IconFigureCard>
-                </div>
-                <IconFigureCard cardTitle="States" cardValue={props.data.numStates} Icon={
-                                        <AutoAwesomeIcon sx={{ fontSize: 60, color: 'white' }}/>
-                                        }> 
-                </IconFigureCard>
-            </StyledRow>
+const iconStyle = { fontSize: 60, color: "white" };
 
-            <StyledRow>
-                <div style={{paddingRight: '0.7rem'}}>
-                <IconFigureCard cardTitle="Sponsors" cardValue={props.data.numSponsors} Icon={
-                                            <AttachMoneyIcon sx={{ fontSize: 60, color: 'white' }}/>
-                                            }> 
-                </IconFigureCard>
-                </div>
-                <div style={{paddingRight: '0.7rem'}}>
-                <IconFigureCard cardTitle="Submissions" cardValue={props.data.numSubmissions} Icon={
-                                        <PublishIcon sx={{ fontSize: 60, color: 'white' }}/>
-                                        }> 
-                </IconFigureCard>
-                </div>
-                <div style={{paddingRight: '0.7rem'}}>
-                <IconFigureCard cardTitle="Females" cardValue={props.data.numFemales} Icon={
-                                        <FemaleIcon sx={{ fontSize: 60, color: 'white' }}/>
-                                        }> 
-                </IconFigureCard>
-                </div>
-                <IconFigureCard cardTitle="Confirmed" cardValue={props.data.numConfirmed} Icon={
-                                        <HowToRegIcon sx={{ fontSize: 60, color: 'white' }}/>
-                                        }> 
-                </IconFigureCard>
-            </StyledRow>
+const YearlyDashboard = function ({ data }) {
+  return (
+    <div>
+      <Row>
+        <BadgeFigureCard
+          LabelOne="Registrants"
+          ValueOne={data.numRegistrants}
+          LabelTwo="Participants"
+          ValueTwo={data.numParticipants}
+        />
+        <IconFigureCard
+          cardTitle="Schools"
+          cardValue={data.numSchools}
+          Icon={<SchoolIcon sx={iconStyle} />}
+        />
+        <IconFigureCard
+          cardTitle="States"
+          cardValue={data.numStates}
+          Icon={<AutoAwesomeIcon sx={iconStyle} />}
+        />
+      </Row>
 
-            <StyledRow>
-            <div style={{paddingRight: '0.7rem'}}>
-                <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue="7" chartType={'pie'} labelData={props.data.labelEthnicities} seriesData={props.data.seriesEthnicities} pieWidth='100%'></PieChartCard>
-                </div>
-                <div style={{paddingRight: '0.7rem'}}>
-                <PieChartCard cardTitle="Gender" cardLabel="Female" cardValue='50' chartType={'pie'} labelData={props.data.labelGenders} seriesData={props.data.seriesGenders} pieWidth='100%'></PieChartCard>
-                </div>
-                <PieChartCard cardTitle="Majors" cardLabel="Count" cardValue={props.data.numMajors} chartType={'pie'} labelData={props.data.labelMajors} seriesData={props.data.seriesMajors} pieWidth='100%'></PieChartCard>
-                
-            </StyledRow>
+      <Row>
+        <IconFigureCard
+          cardTitle="Sponsors"
+          cardValue={data.numSponsors}
+          Icon={<AttachMoneyIcon sx={iconStyle} />}
+        />
+        <IconFigureCard
+          cardTitle="Submissions"
+          cardValue={data.numSubmissions}
+          Icon={<PublishIcon sx={iconStyle} />}
+        />
+        <IconFigureCard
+          cardTitle="Females"
+          cardValue={data.numFemales}
+          Icon={<FemaleIcon sx={iconStyle} />}
+        />
+        <IconFigureCard
+          cardTitle="Confirmed"
+          cardValue={data.numConfirmed}
+          Icon={<HowToRegIcon sx={iconStyle} />}
+        />
+      </Row>
 
-            {/* <StyledRow>
-                <PieChartCard cardTitle="Ethnicities" cardLabel="Count" cardValue={props.ethnicityVal} chartType={'pie'}></PieChartCard>
-                <BarChartCard cardTitle="Countries" cardLabel="Count" cardValue={props.countriesVal}></BarChartCard>
-                <PieChartCard cardTitle="Education Levels" cardLabel="Degrees" cardValue={props.degreesVal} chartType={'pie'}></PieChartCard>
-            </StyledRow>
-
-            <StyledRow>
-                <BarChartCard cardTitle="Majors" cardLabel="Count" cardValue={props.majorsVal}></BarChartCard>
-                <PieChartCard cardTitle="Gender" cardLabel="Female" cardValue={props.genderVal} chartType={'donut'}></PieChartCard>
-                <BarChartCard cardTitle="Hackathon Experience" cardLabel="Count" cardValue={props.hackExperienceVal}></BarChartCard>
-            </StyledRow> */}
-            {/* <SparklineCard></SparklineCard> */}
-        </div>
-    );
-}
+      <Row>
+        <PieChartCard
+          cardTitle="Ethnicities"
+          cardLabel="Count"
+          cardValue="7"
+          chartType="pie"
+          labelData={data.labelEthnicities}
+          seriesData={data.seriesEthnicities}
+          pieWidth="100%"
+        />
+        <PieChartCard
+          cardTitle="Gender"
+          cardLabel="Female"
+          cardValue="50"
+          chartType="pie"
+          labelData={data.labelGenders}
+          seriesData={data.seriesGenders}
+          pieWidth="100%"
+        />
+        <PieChartCard
+          cardTitle="Majors"
+          cardLabel="Count"
+          cardValue={data.numMajors}
+          chartType="pie"
+          labelData={data.labelMajors}
+          seriesData={data.seriesMajors}
+          pieWidth="100%"
+        />
+      </Row>
+    </div>
+  );
+};
 
 export default YearlyDashboard;
